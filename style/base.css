@@ -1,0 +1,162 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css";
+body {
+    background-color:white;
+    color:#555;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align:center;
+}
+
+.splash {
+    position:absolute;
+    top:0px;
+    left:0px;
+    bottom:200px;
+    width:100%;
+    background: rgb(142,68,173);
+    background: linear-gradient(360deg, rgb(142, 68, 173) 0%, rgb(255, 64, 129) 100%);
+    background: linear-gradient(360deg, #03A9F4 0%, #00E676 100%);
+    overflow:hidden;
+}
+.contentBG {
+    position:absolute;
+    top:100%;
+    left:0px;
+    min-height:500px;
+    width:100%;
+    background-color:white;
+}
+.contentArea {
+    position:relative;
+    margin:0 auto;
+    top:-200px;
+    left:0px;
+    min-height:5600px;
+    width:60%;
+    background-color:white;
+}
+
+
+
+h1.contentTitle {
+    color:#8e44ad;
+}
+h1.splashTitle {
+    font-size:100px;
+    color:white;
+    font-family: 'Caveat', cursive;
+}
+h2.splashTitle {
+    font-size:60px;
+    color:white;
+    font-family: 'Caveat', cursive;
+}
+.splashIntro {
+    position:relative;
+    width:600px;
+    height:350px;
+    top:300px;
+    margin:auto;
+    background-color:rgba(0,0,0,0);
+}
+
+
+/* unordered list styling for navigation */
+ul.navigation, ul.navigation li { width:auto; margin:auto; float:right; margin-bottom:5px;  padding:20px; }
+ul.navigation li { list-style-type:none; float:left; font-size: 25px; }
+.navLink:link { color: white; }
+.navLink:visited { color: white; }
+.navLink:hover { color:rgb(255, 64, 129); }
+.navLink:active { color:rgba(255, 255, 255,0.5); }
+.navLink { font-weight:bold; }
+.navLinkScrolled { text-shadow: 1px 2px rgba(0,0,0,0); }
+
+header {
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:200px;
+    width:100%;
+    border-radius:15px;
+    z-index:500;
+}
+.nav {
+    position:relative;
+    
+    width:50%;
+    height:120px;
+    
+    top:0px;
+    margin:0 auto;
+    
+    border-radius:0px 0px 20px 20px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0), 0 0px 0px rgba(0,0,0,0);
+    background: rgba(255,255,255,0);
+    backdrop-filter:blur(15px);
+    
+    transition: all 0.5s ;
+}
+.navScrolled {
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background: rgba(0,0,0,0.45);
+}
+img.headerIcon {
+    position:absolute;
+    top:15px;
+    left:15px;
+    
+    border-radius: 100%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    
+}
+img.headerIconScrolled {
+    box-shadow: 0 0px 0px rgba(0,0,0,0), 0 0px 0px rgba(0,0,0,0);
+}
+
+
+
+.card {
+    position:relative;
+    min-width:5px;
+    min-height:5px;
+    border-radius:15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: white;
+}
+.cardTransparent {
+    backdrop-filter:blur(10px);
+    background: rgba(255,255,255,0.65);
+}
+
+
+/* Wave Animations */
+.wave {
+  background: url(../img/wave.svg) repeat-x; 
+  position: absolute;
+  bottom: 0px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 15s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+.wave:nth-of-type(2) {
+  bottom:-20px;
+  animation: wave 20s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite reverse, swell 15s ease -1.25s infinite;
+  opacity: 0.75;
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-20px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
