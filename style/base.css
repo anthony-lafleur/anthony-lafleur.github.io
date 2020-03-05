@@ -153,6 +153,7 @@ p {
   bottom:-20px;
   animation: wave 20s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite reverse, swell 15s ease -1.25s infinite;
   opacity: 0.75;
+    -webkit-transform: rotateY(180deg);
 }
 @keyframes wave {
   0% {
