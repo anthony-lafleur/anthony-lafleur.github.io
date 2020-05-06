@@ -2,15 +2,14 @@
     width:100%;
     text-align:center;
     font-size:22px;
-    padding-top:40px;
 }
 .resident_wrapper {
     max-width:1500px;
     min-height:250px;
     
     position:relative;
-    margin:auto;
-    margin-top:80px;
+    margin-left:auto;
+    margin-right:auto;
     top:10px;
     display:flex;
     flex-wrap: wrap;
@@ -199,6 +198,16 @@
     color:#b3d0ff;
 }
 .resident_photo_ken {
+}
+
+/* Soleil */
+.resident_name_soleil {
+    background-color:#ff5800;
+    color:#ffdcb3;
+}
+.resident_photo_soleil {
+    bottom:138px;
+    left:108px;
 }
 
 

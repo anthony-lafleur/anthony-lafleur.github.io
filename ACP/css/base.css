@@ -142,3 +142,9 @@ li.nav_active {
     color:black;
     opacity:0.86;
 }
+.resident_wrapper {
+    margin-top:110px;
+}
+nav > ul > li > a > img {
+    display:none;
+}
