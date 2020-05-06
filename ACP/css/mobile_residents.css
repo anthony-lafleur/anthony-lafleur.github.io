@@ -26,8 +26,19 @@
     background-color:#fefbe5;
     border-radius:27px;
     overflow:hidden;
-    background-image: url('../assets/img/pattern-leaves-turquoise.jpg');
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
+}
+.resident_bg {
+    width:350px;
+    height:350px;
+    
+    position:relative;
+    top:0px;
+    margin:10px;
+    margin-right:5px;
+    background-color:#fefbe5;
+    border-radius:27px;
+    overflow:hidden;
 }
 .resident_speech { 
     background-color:#fefbe5;
