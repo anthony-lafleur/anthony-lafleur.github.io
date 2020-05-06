@@ -77,9 +77,33 @@
 }
 .astro {
     position:absolute;
-    right:15px;
-    top:15px;
-    opacity:0.5;
+    right:30px;
+    top:65px;
+    opacity:0.38;
+}
+.astro_name {
+    position:absolute;
+    right:10px;
+    top:97px;
+    opacity:0.38;
+    font-size:12px;
+    width:70px;
+    text-align: center;
+}
+.music {
+    position:absolute;
+    right:35px;
+    top:20px;
+    opacity:0.38;
+}
+.music_name {
+    position:absolute;
+    right:10px;
+    top:42px;
+    opacity:0.38;
+    font-size:12px;
+    width:70px;
+    text-align: center;
 }
 
 /* -- INDIVIDUAL RESIDENTS NAME & PHOTO STYLIZATION -- */
