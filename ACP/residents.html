@@ -5,10 +5,12 @@
 
         <meta name="author" content="Anthony LaFleur">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-        <link rel="stylesheet" media="screen and (min-width: 1068px)" href="css/base.css" />
-        <link rel="stylesheet" media="screen and (min-width: 1068px)" href="css/residents.css" />
-        <link rel="stylesheet" media="screen and (max-width: 1067px)" href="css/mobile_base.css" />
-        <link rel="stylesheet" media="screen and (max-width: 1067px)" href="css/mobile_residents.css" />
+        
+        <link rel="stylesheet" media="screen and (min-width: 740px)" href="css/base.css" />
+        <link rel="stylesheet" media="screen and (max-width: 739px)" href="css/mobile_base.css" />
+        
+        <link rel="stylesheet" href="css/residents.css" />
+        
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Raleway:wght@800&display=swap" rel="stylesheet">
         <link rel="icon" 
             type="image/png" 
@@ -19,7 +21,7 @@
     <body>
         <header>
             
-            <div class="version">v0.0.b0006b</div>
+            <div class="version">v0.0.b0007</div>
             <div class="credits">credits</div>
             
             <nav>
@@ -37,7 +39,7 @@
         
         
         <div class="resident_wrapper">
-            <div class="resident_banner">Meet my Residents!
+            <div class="resident_banner">Meet my Current Residents!
             </div>
             
             <div class="resident">
@@ -91,21 +93,34 @@
                 <img class="music" src="assets/img/music.svg" width="30px" />
                 <div class="music_name">K.K. Soul</div>
                 <img class="resident_photo resident_photo_henry" src="assets/img/henry.png" width="100px" />
-                <div class="resident_speech">Henry (ヘンリー, Henrii?) is a smug frog. His birthday is September 21st.</div>
+                <div class="resident_speech">Henry (ヘンリー, Henrii) is a smug frog. His birthday is September 21st.</div>
                 <div class="resident_name resident_name_henry">Henry</div>
             </div>
             
-            <div class="resident">
+            <div class="resident" id="chadder">
                 <img class="resident_bg" style="filter:hue-rotate(-105deg);" src="assets/img/pattern-leaves-turquoise.jpg" width="100%" />
                 <img class="astro" style="transform:scale(0.82);" src="assets/img/astrology/sagittarius.svg" width="35px" />
                 <div class="astro_name">Sagittarius</div>
                 <img class="music" src="assets/img/music.svg" width="30px" />
                 <div class="music_name">K.K. Soul</div>
                 <img class="resident_photo resident_photo_henry" src="assets/img/chadder.png" width="100px" />
-                <div class="resident_speech">Chadder (チーズ, Chīzu?) is a smug mouse His birthday is December 15th.</div>
+                <div class="resident_speech">Chadder (チーズ, Chīzu) is a smug mouse His birthday is December 15th.</div>
                 <div class="resident_name resident_name_chadder">Chadder</div>
             </div>
             
+            <div class="resident_banner">My Past Residents
+            </div>
+            
+            <div class="resident resident_old">
+                <img class="resident_bg" style="filter:hue-rotate(15deg);" src="assets/img/pattern-leaves-turquoise.jpg" width="100%" />
+                <img class="astro" src="assets/img/astrology/capricorn.svg" width="35px" />
+                <div class="astro_name">Capricorn</div>
+                <img class="music" src="assets/img/music.svg" width="30px" />
+                <div class="music_name">Comrade K.K.</div>
+                <img class="resident_photo resident_photo_ken" src="assets/img/ken.png" width="100px" />
+                <div class="resident_speech">Ken (クロベエ, Kurobē) is a smug chicken. His birthday is December 23rd.</div>
+                <div class="resident_name resident_name_ken">Ken</div>
+            </div>
             
             
             <div class="footer_temp"></div>

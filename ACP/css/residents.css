@@ -1,43 +1,64 @@
 .resident_banner {
     width:100%;
+    text-align:center;
+    font-size:22px;
+    padding-top:40px;
 }
 .resident_wrapper {
-    max-width:1080px;
-    min-width:525px;
+    max-width:1500px;
     min-height:250px;
     
     position:relative;
     margin:auto;
-    margin-top:150px;
+    margin-top:80px;
     top:10px;
     display:flex;
     flex-wrap: wrap;
-}
+    justify-content: center;
+} 
 .resident {
-    width:510px;
+    width:350px;
     height:350px;
     
     position:relative;
     top:0px;
     margin:10px;
+    margin-right:5px;
     background-color:#fefbe5;
     border-radius:27px;
     overflow:hidden;
-    background-image: url('../assets/img/pattern-leaves-turquoise.jpg');
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
 }
+.resident_old {
+    filter:grayscale(75%);
+}
+
+.resident_bg {
+    width:350px;
+    height:350px;
+    
+    position:absolute;
+    top:0px;
+    margin:0px;
+    margin-right:5px;
+    background-color:#fefbe5;
+    border-radius:27px;
+    overflow:hidden;
+}
+
+
 .resident_speech { 
     background-color:#fefbe5;
     color:#807256;
-    width:400px;
     height:130px;
     
     position:absolute;
-    bottom:5px;
+    bottom:10px;
     left:5px;
+    right:5px;
     padding:50px;
     padding-top:30px;
-    padding-bottom:10px;
+    padding-bottom:5px;
     font-size:22px;
     border-radius:80px;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
@@ -68,11 +89,43 @@
 .resident_photo {
     
     position:absolute;
-    left:200px;
-    bottom:100px;
+    left:130px;
+    bottom:120px;
     object-fit:cover;
 }
-
+.music {
+    right:32px;
+    position:absolute;
+    top:70px;
+    opacity:0.38;
+    transform: rotate(-9deg);
+}
+.music_name {
+    position:absolute;
+    right:10px;
+    top:97px;
+    opacity:0.38;
+    font-size:12px;
+    width:70px;
+    text-align: center;
+    color:black;
+}
+.astro {
+    position:absolute;
+    right:28px;
+    top:15px;
+    opacity:0.38;
+}
+.astro_name {
+    position:absolute;
+    right:10px;
+    top:45px;
+    opacity:0.38;
+    font-size:12px;
+    width:70px;
+    text-align: center;
+    color:black;
+}
 
 /* -- INDIVIDUAL RESIDENTS NAME & PHOTO STYLIZATION -- */
 /* BANGLE */
@@ -85,17 +138,6 @@
     top:;
 }
 
-/* RIZZO */
-.resident_name_rizzo {
-    background-color:blue;
-    color:#000055;
-}
-.resident_photo_rizzo {
-    width:105px;
-    bottom:150px;
-    left:220px;
-}
-
 /* PASHMINA */
 .resident_name_pashmina {
     background-color:salmon;
@@ -104,7 +146,18 @@
 .resident_photo_pashmina {
     width:105px;
     bottom:120px;
-    left:220px;
+    left:145px;
+}
+
+/* RIZZO */
+.resident_name_rizzo {
+    background-color:blue;
+    color:#000055;
+}
+.resident_photo_rizzo {
+    width:105px;
+    bottom:153px;
+    left:140px;
 }
 
 /* SHELDON */
@@ -114,10 +167,50 @@
 }
 .resident_photo_sheldon {
     width:105px;
-    bottom:150px;
-    left:220px;
+    bottom:142px;
+    left:137px;
 }
 
+/* Henry */
+.resident_name_henry {
+    background-color:#49d436;
+    color:#0c582f;
+}
+.resident_photo_henry {
+    width:105px;
+    bottom:142px;
+    left:127px;
+}
+
+/* Chadder */
+.resident_name_chadder {
+    background-color:#ffce00;
+    color:#804306;
+}
+.resident_photo_chadder {
+    width:105px;
+    bottom:142px;
+    left:127px;
+}
+
+/* Ken */
+.resident_name_ken{
+    background-color:#433bff;
+    color:#b3d0ff;
+}
+.resident_photo_ken {
+}
+
+
+
+
+
+
+
+.footer_temp {
+    width:100%;
+    height:500px;
+}
 
 /* -- Floating Animation -- */
 @keyframes float {
