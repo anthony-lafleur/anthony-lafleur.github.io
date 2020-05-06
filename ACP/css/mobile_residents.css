@@ -80,6 +80,7 @@
     position:absolute;
     top:70px;
     opacity:0.38;
+    transform: rotate(-9deg);
 }
 .music_name {
     position:absolute;
