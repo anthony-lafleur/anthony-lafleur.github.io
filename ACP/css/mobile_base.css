@@ -37,7 +37,7 @@ header {
 
 nav {
     position:relative;
-    top:20px;
+    top:0px;
     margin:auto;
     width:500px;
     height:70px;
@@ -49,7 +49,6 @@ nav > ul {
     list-style:none;
     background-color:#f1e26f;
     width:500px;
-    border-radius:4px;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
 }
 nav > ul > li {
@@ -71,19 +70,7 @@ nav > ul > li:hover {
     width:auto;
 }
 .nav_ribbon {
-    position:absolute;
-    height:80px;
-    width:80px;
-    top:17px;
-    left:-36px;
-}
-.nav_ribbon:nth-child(2) {
-    position:absolute;
-    height:80px;
-    width:80px;
-    top:17px;
-    left:456px;
-    transform: scaleX(-1);
+    display:none;
 }
 
 a:link {
@@ -106,8 +93,12 @@ a:active {
     color:#807256;
     border-bottom:2px #6b5c43 solid;
 }
-.nav_active {
+a.nav_active {
     text-decoration: none;
     color:#807256;
     border-bottom:2px #6b5c43 solid;
+}
+li.nav_active {
+    color:#807256;
+    background-color:#fff;
 }
