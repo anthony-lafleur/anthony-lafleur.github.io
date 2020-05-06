@@ -2,8 +2,7 @@
     width:100%;
 }
 .resident_wrapper {
-    max-width:1080px;
-    min-width:525px;
+    max-width:500px;
     min-height:250px;
     
     position:relative;
@@ -30,8 +29,8 @@
 .resident_speech { 
     background-color:#fefbe5;
     color:#807256;
-    width:400px;
-    height:130px;
+    width:235px;
+    height:150px;
     
     position:absolute;
     bottom:5px;
@@ -53,7 +52,7 @@
     height:26px;
     
     position:absolute;
-    bottom:155px;
+    bottom:175px;
     left:45px;
     border-radius:15px;
     color:rgba(255,255,255,0.58);
@@ -69,8 +68,8 @@
 .resident_photo {
     
     position:absolute;
-    left:200px;
-    bottom:100px;
+    left:130px;
+    bottom:120px;
     object-fit:cover;
 }
 
@@ -86,6 +85,17 @@
     top:;
 }
 
+/* PASHMINA */
+.resident_name_pashmina {
+    background-color:salmon;
+    color:#fefbe5;
+}
+.resident_photo_pashmina {
+    width:105px;
+    bottom:130px;
+    left:140px;
+}
+
 /* RIZZO */
 .resident_name_rizzo {
     background-color:blue;
@@ -94,17 +104,6 @@
 .resident_photo_rizzo {
     width:105px;
     bottom:150px;
-    left:220px;
-}
-
-/* PASHMINA */
-.resident_name_pashmina {
-    background-color:salmon;
-    color:#fefbe5;
-}
-.resident_photo_pashmina {
-    width:105px;
-    bottom:120px;
     left:220px;
 }
 
