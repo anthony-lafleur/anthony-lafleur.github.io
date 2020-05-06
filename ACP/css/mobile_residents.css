@@ -1,5 +1,7 @@
 .resident_banner {
     width:100%;
+    text-align:center;
+    font-size:22px;
 }
 .resident_wrapper {
     max-width:500px;
@@ -14,7 +16,7 @@
     justify-content: center;
 } 
 .resident {
-    width:510px;
+    width:350px;
     height:350px;
     
     position:relative;
@@ -29,16 +31,16 @@
 .resident_speech { 
     background-color:#fefbe5;
     color:#807256;
-    width:235px;
     height:150px;
     
     position:absolute;
     bottom:5px;
     left:5px;
+    right:5px;
     padding:50px;
     padding-top:30px;
     padding-bottom:10px;
-    font-size:22px;
+    font-size:18px;
     border-radius:80px;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
     opacity:0.80;
@@ -79,7 +81,6 @@
 .resident_name_bangle {
     background-color:#801400;
     color:#fefbe5;
-    color:blue;
 }
 .resident_photo_bangle {
     width:;
