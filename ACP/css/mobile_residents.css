@@ -41,7 +41,7 @@
     padding:50px;
     padding-top:30px;
     padding-bottom:10px;
-    font-size:18px;
+    font-size:22px;
     border-radius:80px;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
     opacity:0.80;
@@ -75,7 +75,12 @@
     bottom:120px;
     object-fit:cover;
 }
-
+.astro {
+    position:absolute;
+    right:15px;
+    top:15px;
+    opacity:0.5;
+}
 
 /* -- INDIVIDUAL RESIDENTS NAME & PHOTO STYLIZATION -- */
 /* BANGLE */
