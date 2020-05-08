@@ -146,7 +146,7 @@ li.nav_active {
     opacity:0.86;
 }
 
-.resident_wrapper {
+.wrapper {
     margin-top:80px;
 }
 
@@ -168,4 +168,8 @@ li.nav_active {
     left:0%;
     width:100%;
     height:100%;
+}
+.footer_temp {
+    width:100%;
+    height:200px;
 }
