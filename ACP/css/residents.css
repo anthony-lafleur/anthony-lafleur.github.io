@@ -73,12 +73,12 @@
     
     position:absolute;
     bottom:155px;
-    left:45px;
+    left:30px;
     border-radius:15px;
     color:rgba(255,255,255,0.58);
     font-family: 'Raleway', sans-serif;
     text-align:center;
-    padding:11px;
+    padding:17px;
     padding-top:5px;
     padding-bottom:0px;
 	animation: float 3.3s ease-in-out infinite;
@@ -208,6 +208,28 @@
 .resident_photo_soleil {
     bottom:138px;
     left:108px;
+}
+
+/* Stu */
+.resident_name_stu {
+    background-color:#4417be;
+    color:#8ad1f0;
+}
+.resident_photo_stu {
+    
+    bottom:122px;
+    left:128px;
+}
+
+/* Sydney */
+.resident_name_sydney {
+    background-color:#9717be;
+    color:#ffffff;
+}
+.resident_photo_sydney {
+    
+    bottom:118px;
+    left:132px;
 }
 
 
