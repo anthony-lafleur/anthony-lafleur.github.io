@@ -16,61 +16,27 @@
             type="image/png" 
             href="assets/img/favicon.png"> 
         
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous">
+        </script>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-</script>
-<script> 
-$(function(){
-  console.log("Example Text Loaded");
-  $("#example").load("example.html"); 
-});
-</script> 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <script> 
+            $(function(){
+              console.log("Example Text Loaded");
+              $("#example").load("example.html"); 
+              console.log("Example Text Loaded");
+              $("#version").load("version.txt"); 
+            });
+        </script> 
     </head>
     
     
     <body>
         <header>
             
-            <div class="version">v0.0.b0010</div>
+            <div class="version" id="version">v#.#.b####</div>
             <div class="credits" id="example">credits</div>
             <div class="credits_wrapper">credits will go here :o </div>
             
