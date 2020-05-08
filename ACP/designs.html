@@ -25,7 +25,7 @@
         <script> 
             $(function(){
               console.log("Example Text Loaded");
-              $("#example").load("example.html"); 
+              $("#credits").load("credits.html"); 
               console.log("Example Text Loaded");
               $("#version").load("version.txt"); 
             });
@@ -36,8 +36,8 @@
     <body>
         <header>
             
-            <div class="version">v0.0.b0010</div>
-            <div class="credits">credits</div>
+            <div class="version" id="version">v#.#.b####</div>
+            <div class="credits" id="example">credits</div>
             
             <nav>
                 <img class="nav_ribbon" src="assets/img/ribbon-end-yellow.svg"/>

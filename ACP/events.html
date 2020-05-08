@@ -9,7 +9,7 @@
         <link rel="stylesheet" media="screen and (min-width: 740px)" href="css/base.css" />
         <link rel="stylesheet" media="screen and (max-width: 739px)" href="css/mobile_base.css" />
         
-        <link rel="stylesheet" href="css/residents.css" />
+        <link rel="stylesheet" href="css/events.css" />
         
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Raleway:wght@800&display=swap" rel="stylesheet">
         <link rel="icon" 
@@ -25,7 +25,7 @@
         <script> 
             $(function(){
               console.log("Example Text Loaded");
-              $("#example").load("example.html"); 
+              $("#credits").load("credits.html"); 
               console.log("Example Text Loaded");
               $("#version").load("version.txt"); 
             });
@@ -36,8 +36,8 @@
     <body>
         <header>
             
-            <div class="version">v0.0.b0010</div>
-            <div class="credits">credits</div>
+            <div class="version" id="version">v#.#.b####</div>
+            <div class="credits" id="example">credits</div>
             
             <nav>
                 <img class="nav_ribbon" src="assets/img/ribbon-end-yellow.svg"/>
@@ -86,6 +86,27 @@
                 </ul>
             </nav>
         </header>
+        
+        <div class="event_wrapper">
+            
+            <div class="event_banner">Upcoming Events</div>
+            
+            <!-- PJ PARTY EVENT -->
+            <div class="event">
+                <img class="event_bg event_bg_pj2020" src="assets/img/events/pj_party2020.png" />
+                <div class="event_RSVP">RSVP</div>
+            </div>
+            
+            <!-- PRIDE EVENT -->
+            <div class="event">
+                <img class="event_bg" src="assets/img/events/pride.png" />
+                <div class="event_RSVP">RSVP</div>
+            </div>
+            
+            
+            
+            
+        </div>
         
         
     </body>
