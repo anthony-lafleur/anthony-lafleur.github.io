@@ -13,21 +13,21 @@ body {
 header {
     position:fixed;
     background-color:#1d1d1d;
+    box-shadow:1px 2px 10px rgba(0,0,0,0.36);
     left:0px;
     top:0px;
-    height:100%;
-    width:230px;
+    height:100px;
+    width:100%;
     z-index:4;
     text-align:center;
-    box-shadow:1px 2px 10px rgba(0,0,0,0.36);
 }
 footer {
     position:fixed;
     background-color:#1d1d1d;
     right:0px;
-    top:0px;
-    height:100%;
-    width:100px;
+    bottom:0px;
+    height:50px;
+    width:100%;
     z-index:4;
     text-align:center;
     box-shadow:1px 2px 10px rgba(0,0,0,0.36);
@@ -39,15 +39,31 @@ header > img {
     margin-top:25px;
 }
 nav {
+    position:absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    background-color:red;
+    background-color:rgba(0,0,0,0);
+    box-shadow:1px 2px 10px rgba(0,0,0,0);
+    height:100px;
+    overflow:hidden;
 }
 nav > ul {
+    position:absolute;
+    top:10px;
+    right:0px;
     list-style: none;
     text-align:right;
     padding:20px;
-    padding-left:45px;
+    width:100px;
+    padding-top:0px;
+    margin-top:0px;
 }
 nav > ul:nth-child(2) {
     text-align: left;
+    right:auto;
+    left:0px;
 }
 nav > ul > li {
     cursor:pointer;
@@ -63,8 +79,8 @@ nav > ul > li:hover {
 }
 h1 {
     text-align:center;
-    padding-right:20px;
-    padding-left:45px;
+    font-size:24px;
+    z-index:500;
 }
 h1 > a {
     text-decoration: none;
@@ -149,13 +165,14 @@ h1 > a {
 
 .outside_wrapper {
     position:absolute;
-    top:0px;
-    left:230px;
-    right:105px;
+    top:100px;
+    left:0px;
+    right:0px;
     bottom:0px;
     width:auto;
     height:auto;
     overflow-y:scroll;
+    overflow-x:hidden;
 }
 /* wrapper for cards */
 .wrapper {
@@ -168,7 +185,7 @@ h1 > a {
     flex-wrap:wrap;
     height:auto;
     padding:15px;
-    justify-content: left;
+    justify-content: center;
 }
 
 /* width */
