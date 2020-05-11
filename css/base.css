@@ -112,10 +112,6 @@ h1 > a {
     overflow:hidden;
     cursor: pointer;
     box-shadow:1px 1px 3px rgba(0,0,0,0.36);
-    transition:0.2s all;
-}
-.item:hover {
-    transform:scale(1.1);
 }
 .item_cover {
     position:relative;
@@ -125,23 +121,27 @@ h1 > a {
     display:flex;
     height:100%;
     text-align:center;
-    backdrop-filter: blur(0px);
-    opacity:0;
+    opacity:1;
+    transition:0.2s all;
 }
 .item_cover:hover {
-    backdrop-filter: blur(7px);
-    opacity:1;
+    opacity:0;
 }
 .card_title {
     width:170px;
     margin:40px 15px 40px 15px;
     border-radius:100%;
     padding:36px 5px 25px 5px;
-    background-color:rgba(255,255,255,0.40);
+    background-color:rgba(255,255,255,0.60);
     box-shadow:1px 1px 5px rgba(0,0,0,0.36) inset;
     letter-spacing: -1px;
     font-weight: 600;
+    backdrop-filter: blur(7px);
 }
+.card_main_title {
+    color:#1d1d1d;
+}
+
 .card_title_single_line {
     padding:48px 5px 25px 5px;
 }

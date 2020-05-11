@@ -8,10 +8,50 @@
         
         <link rel="stylesheet" type="text/css" href="css/base.css" media="screen" />
         <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     </head>
     <body>
         <header>
             <!--<img src="" width="80px" height="80px" />-->
+            <script>
+            
+            
+            jQuery(function(){
+                 jQuery('#showall').click(function(){
+                       jQuery('.item').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showall").addClass("li_selected");
+                     console.log(">show all");
+                });
+                 jQuery('#showweb').click(function(){
+                       jQuery('.prog').hide();
+                       jQuery('.art').hide();
+                       jQuery('.web').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showweb").addClass("li_selected");
+                     console.log(">hide prog + art\n>show web");
+                });
+                 jQuery('#showprog').click(function(){
+                       jQuery('.art').hide();
+                       jQuery('.web').hide();
+                       jQuery('.prog').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showprog").addClass("li_selected");
+                     console.log(">hide web + art\n>show prog");
+                });
+                 jQuery('#showart').click(function(){
+                       jQuery('.prog').hide();
+                       jQuery('.web').hide();
+                       jQuery('.art').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showart").addClass("li_selected");
+                     console.log(">hide prog + web\n>show art");
+                });
+            });
+            
+            
+            </script>
             <h1>
                 <a href="index.html">
                     <span style="letter-spacing: 4px;">ANTHONY</span>
@@ -21,10 +61,10 @@
             </h1>
             <nav>
                 <ul>
-                    <li class="li_selected">ALL WORK</li>
-                    <li>WEB</li>
-                    <li>PROGRAMMING</li>
-                    <li>DESIGN & ART</li>
+                    <li class="li_selected" id="showall">ALL WORK</li>
+                    <li id="showweb">WEB</li>
+                    <li id="showprog">PROGRAMMING</li>
+                    <li id="showart">DESIGN & ART</li>
                 </ul>
                 <ul>
                     <li>ABOUT</li>
@@ -37,33 +77,33 @@
         <div class="outside_wrapper">
         <div class="wrapper">
             
-            <div class="item">
+            <div class="item web">
                 <img src="img/animalcrossing.jpg" height="200px" width="150px" />
                 <div class="item_cover">
-                    <h3 class="card_title">FEN<br> VISITOR'S GUIDE</h3>
+                    <h3 class="card_title"><span class="card_main_title">FEN</span><br> VISITOR'S GUIDE</h3>
                 </div>
             </div>
             
-            <div class="item">
+            <div class="item web">
                 <img src="img/pizzaplace.jpg" height="200px" width="150px" />
                 <div class="item_cover">
-                    <h3 class="card_title">PIZZA<br>PLACE</h3>
+                    <h3 class="card_title"><span class="card_main_title">PIZZA PLACE</span><br>RESTAURANT</h3>
                 </div>
             </div>
             
-            <div class="item">
+            <div class="item web">
                 <img src="img/kylepage.jpg" height="200px" width="150px" />
                 <div class="item_cover">
-                    <h3 class="card_title">KYLE PAGE PHOTOGRAPHY</h3>
+                    <h3 class="card_title"><span class="card_main_title">KYLE PAGE </span>PHOTOGRAPHY</h3>
                 </div>
             </div>
             
-            <div class="item">
+            <!--<div class="item prog">
                 <img src="img/python.jpg" height="200px" width="150px" />
                 <div class="item_cover">
                     <h3 class="card_title card_title_single_line">PYTHON</h3>
                 </div>
-            </div>
+            </div>-->
             
             
             <footer>
