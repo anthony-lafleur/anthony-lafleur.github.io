@@ -89,20 +89,43 @@
         </header>
         
         <div class="sh_wrapper">
-            <form class="sh_bar_wrapper" action="/action_page.php">
-                <input class="sh_bar" type="text" id="fname" name="fname" value="What's Different?"><br>
-                <input class="sh_guess_button" type="submit" value=" ">
-                <input class="sh_help_button" type="submit" value="Help">
-            <div class="sh_bumps"></div>
-            <div class="sh_bumps2"></div>
+            <form autocomplete="off" class="bar_wrapper" action="/action_page.php">
+                <input class="bar bar_hidden" type="text" id="guess" name="guess" onfocus="this.value=''" value="What's different?"><br>
+                <input id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()">
+                <input type="button" class="help_button" value=" ">
+            <div class="bumps"></div>
+            <div class="bumps2"></div>
             </form> 
-            <figure class="sh_clue">
-                <img src="" />
-                <caption class="sh_hint"></caption>
-            </figure>
-            <div class="sh_help"></div>
+            <div class="clues" id="clues">
+                <div class="back_button back_button_hidden" id="backbutton" onclick="uiunfocus()"></div>
+                <div class="clue" id="1" >
+                    <img src="assets/img/hunt/hunt1.jpg" onclick="uifocus(1)" />
+                    <caption class="hint"></caption>
+                </div>
+                <figure class="clue" id="2">
+                    <img src="assets/img/hunt/hunt2.jpg" onclick="uifocus(2)" />
+                    <caption class="hint"></caption>
+                </figure>
+                <figure class="clue" id="3">
+                    <img src="assets/img/hunt/hunt3.jpg" onclick="uifocus(3)" />
+                    <caption class="hint"></caption>
+                </figure>
+                <figure class="clue" id="4">
+                    <img src="assets/img/hunt/hunt4.jpg" onclick="uifocus(4)" />
+                    <caption class="hint"></caption>
+                </figure>
+                <figure class="clue" id="5">
+                    <img src="assets/img/hunt/hunt5.jpg" onclick="uifocus(5)" />
+                    <caption class="hint"></caption>
+                </figure>
+                <figure class="clue" id="6">
+                    <img src="assets/img/hunt/hunt6.jpg" onclick="uifocus(6)" />
+                    <caption class="hint"></caption>
+                </figure>
+            </div>
+            <div class="help"></div>
         </div>
     </body>
-    
+    <script src="sh.js"></script>
     
 </html>
