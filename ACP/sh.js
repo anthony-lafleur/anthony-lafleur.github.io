@@ -29,6 +29,7 @@ function uifocus(x) {
   document.getElementById("guessbutton").classList.remove('guess_button_hidden');
   document.getElementById("guess").classList.remove('bar_hidden');
   document.getElementById("backbutton").classList.remove('back_button_hidden');
+  document.getElementById("helpbutton").classList.add('help_button_hidden');
 }
 function uiunfocus() {
     var i;
@@ -41,6 +42,7 @@ function uiunfocus() {
     document.getElementById("guessbutton").classList.add('guess_button_hidden');
   document.getElementById("guess").classList.add('bar_hidden');
   document.getElementById("backbutton").classList.add('back_button_hidden');
+  document.getElementById("helpbutton").classList.remove('help_button_hidden');
 }
 
 function wawa() {
