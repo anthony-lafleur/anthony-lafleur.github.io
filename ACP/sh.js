@@ -48,6 +48,7 @@ function uiunfocus() {
 }
 
 function wawa() {
+    document.getElementById("keyboard_hide").focus;
   var x = document.getElementById('guess').value;
     console.log("the users input was '" + x + "'");
   /* document.getElementById('alert').innerHTML = 'The user input is: ' + x;*/
