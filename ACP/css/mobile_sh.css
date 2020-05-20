@@ -1,6 +1,4 @@
-::-webkit-progress-bar {
-  background-color: red;
-}
+
 
 
 .sh_wrapper {
@@ -153,6 +151,8 @@
     background-color:#e6dfc3;
     z-index:500;
     padding:10px;
+    text-align:center;
+    font-size:28px;
 }
 .loaded {
     display:none !important;
