@@ -1,5 +1,5 @@
 window.addEventListener('load', function () {
-  alert("It's loaded!")
+  document.getElementById("loading_screen").classList.add('loaded');
 })
 
 
