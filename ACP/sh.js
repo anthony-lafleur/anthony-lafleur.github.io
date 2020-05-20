@@ -12,6 +12,7 @@ var keyword_5 = "5";
 var keyword_6 = "6";
 
 var current_selected = "default";
+var TTW_stamp = 500;
 
 var key_1 = false;
 var key_2 = false;
@@ -55,9 +56,7 @@ function uiunfocus() {
 
 function stamp(x) {
             document.getElementById("stamp" + x).classList.add('stampt');
-            var y = "key_" + x;
-            console.log(y);
-            window.key_1 = true;
+            wincheck();
 }
 
 
@@ -71,7 +70,8 @@ function wawa() {
         if ( x == keyword_1) {
             console.log("good job");
             hideKeyboard();
-            setTimeout(function(){ stamp(1); }, 3000);
+            setTimeout(function(){ stamp(1); }, TTW_stamp);
+            window.key_1 = true;
         } else {
             console.log("bad boy");
         };
@@ -79,7 +79,8 @@ function wawa() {
     if (current_selected == 2) {
         if ( x == keyword_2) {
             console.log("good job");
-            document.getElementById("stamp2").classList.add('stampt');
+            hideKeyboard();
+            setTimeout(function(){ stamp(2); }, TTW_stamp);
             window.key_2 = true;
         } else {
             console.log("bad boy");
@@ -88,7 +89,8 @@ function wawa() {
     if (current_selected == 3) {
         if ( x == keyword_3) {
             console.log("good job");
-            document.getElementById("stamp3").classList.add('stampt');
+            hideKeyboard();
+            setTimeout(function(){ stamp(3); }, TTW_stamp);
             window.key_3 = true;
         } else {
             console.log("bad boy");
@@ -97,7 +99,8 @@ function wawa() {
     if (current_selected == 4) {
         if ( x == keyword_4) {
             console.log("good job");
-            document.getElementById("stamp4").classList.add('stampt');
+            hideKeyboard();
+            setTimeout(function(){ stamp(4); }, TTW_stamp);
             window.key_4 = true;
         } else {
             console.log("bad boy");
@@ -106,7 +109,8 @@ function wawa() {
     if (current_selected == 5) {
         if ( x == keyword_5) {
             console.log("good job");
-            document.getElementById("stamp5").classList.add('stampt');
+            hideKeyboard();
+            setTimeout(function(){ stamp(5); }, TTW_stamp);
             window.key_5 = true;
         } else {
             console.log("bad boy");
@@ -115,7 +119,8 @@ function wawa() {
     if (current_selected == 6) {
         if ( x == keyword_6) {
             console.log("good job");
-            document.getElementById("stamp6").classList.add('stampt');
+            hideKeyboard();
+            setTimeout(function(){ stamp(6); }, TTW_stamp);
             window.key_6 = true;
         } else {
             console.log("bad boy");
@@ -140,10 +145,12 @@ function hideKeyboard() {
 };
 
 function wincheck() {
-    console.log(key_1);
-    console.log(key_2);
-    console.log(key_3);
-    console.log(key_4);
-    console.log(key_5);
-    console.log(key_6);
+    console.log("Win Check:\n" +
+                "Key #1:" + key_1 + "\n" +
+                "Key #2:" + key_2 + "\n" +
+                "Key #3:" + key_3 + "\n" +
+                "Key #4:" + key_4 + "\n" +
+                "Key #5:" + key_5 + "\n" +
+                "Key #6:" + key_6 + "\n"
+                );
 }
