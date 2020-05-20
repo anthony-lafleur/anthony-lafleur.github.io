@@ -51,7 +51,7 @@ function wawa() {
     
     
     
-    document.getElementById("guess").blur();
+    document.getElementById("guess").hidefocus = "true";
     
     
     
