@@ -16,7 +16,6 @@
         <link rel="icon" 
             type="image/png" 
             href="assets/img/favicon.png"> 
-        
     </head>
     
     
@@ -26,17 +25,17 @@
         </header>
         
         <div class="sh_wrapper">
-            <form autocomplete="off" class="bar_wrapper" action="/action_page.php">
-                <input class="bar bar_hidden" type="text" id="guess" name="guess" onfocus="this.value=''" value="What's different?"><br>
-                <input id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()">
-                <input type="button" id="helpbutton" class="help_button" value=" ">
+            <form autocomplete="off" class="bar_wrapper" action="#">
+                <input class="bar bar_hidden" type="text" id="guess" name="guess" onfocus="this.value=''" value="What's different?" onkeypress="handle(event)"><br>
+                <button id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()"></button>
+                <button type="button" id="helpbutton" class="help_button" value=" "></button>
             <div class="bumps"></div>
             </form> 
             <div class="clues" id="clues">
                 <div class="back_button back_button_hidden" id="backbutton" onclick="uiunfocus()"></div>
                 <div class="clue" id="1" >
                     <img src="assets/img/hunt/hunt1.jpg" onclick="uifocus(1)" class="clue_image" />
-                    <img src="assets/img/hunt/stamp.png" id="stamp1" onclick="uifocus(1)" class="stamp stampt" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp1" onclick="uifocus(1)" class="stamp" />
                 </div>
                 <div class="clue" id="2">
                     <img src="assets/img/hunt/hunt2.jpg" onclick="uifocus(2)" class="clue_image" /> 
@@ -63,5 +62,7 @@
         </div>
     </body>
     <script src="sh.js"></script>
+        
+
     
 </html>

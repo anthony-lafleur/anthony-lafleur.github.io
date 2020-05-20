@@ -43,6 +43,8 @@ function uiunfocus() {
   document.getElementById("guess").classList.add('bar_hidden');
   document.getElementById("backbutton").classList.add('back_button_hidden');
   document.getElementById("helpbutton").classList.remove('help_button_hidden');
+    document.getElementById("guess").value = "What's Different?";
+    wincheck();
 }
 
 function wawa() {
@@ -63,6 +65,7 @@ function wawa() {
         if ( x == keyword_2) {
             console.log("good job");
             document.getElementById("stamp2").classList.add('stampt');
+            window.key_2 = true;
         } else {
             console.log("bad boy");
         };
@@ -71,6 +74,7 @@ function wawa() {
         if ( x == keyword_3) {
             console.log("good job");
             document.getElementById("stamp3").classList.add('stampt');
+            window.key_3 = true;
         } else {
             console.log("bad boy");
         };
@@ -79,6 +83,7 @@ function wawa() {
         if ( x == keyword_4) {
             console.log("good job");
             document.getElementById("stamp4").classList.add('stampt');
+            window.key_4 = true;
         } else {
             console.log("bad boy");
         };
@@ -87,6 +92,7 @@ function wawa() {
         if ( x == keyword_5) {
             console.log("good job");
             document.getElementById("stamp5").classList.add('stampt');
+            window.key_5 = true;
         } else {
             console.log("bad boy");
         };
@@ -95,12 +101,31 @@ function wawa() {
         if ( x == keyword_6) {
             console.log("good job");
             document.getElementById("stamp6").classList.add('stampt');
+            window.key_6 = true;
         } else {
             console.log("bad boy");
         };
     };
 };
 
+
+
+    function handle(e){
+        if(e.keyCode === 13){
+            e.preventDefault(); // Ensure it is only this code that rusn
+
+            wawa();
+        }
+    }
+
+
+
+
 function wincheck() {
     console.log(key_1);
+    console.log(key_2);
+    console.log(key_3);
+    console.log(key_4);
+    console.log(key_5);
+    console.log(key_6);
 }
