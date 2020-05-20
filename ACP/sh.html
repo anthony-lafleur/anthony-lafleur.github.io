@@ -17,75 +17,12 @@
             type="image/png" 
             href="assets/img/favicon.png"> 
         
-        <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-        </script>
-        
-        <script> 
-            $(function(){
-              console.log("Example Text Loaded");
-              $("#credits").load("credits.html"); 
-              console.log("Example Text Loaded");
-              $("#version").load("version.txt"); 
-            });
-        </script> 
     </head>
     
     
     <body>
         <header>
-            
-            <div class="version" id="version">v#</div>
-            <div class="credits">credits</div>
-            
-            <nav>
-                <img class="nav_ribbon" src="assets/img/ribbon-end-yellow.svg"/>
-                <img class="nav_ribbon" src="assets/img/ribbon-end-yellow.svg"/>
-                <ul>
-                    <li>
-                        <a href="index.html">
-                            
-                                Home
-                            <img src="assets/img/menu_home.svg" href="index.html" width="100%" />
-                            
-                        </a>
-                    </li>
-                    <li href="map.html">
-                        <a href="map.html">
-                            
-                                Map
-                            <img src="assets/img/menu_map.svg" width="100%" />
-                            
-                        </a>
-                    </li>
-                    <li href="residents.html">
-                        <a href="residents.html">
-                            
-                                Residents
-                            <img src="assets/img/menu_residents.svg" href="residents.html" width="100%" />
-                            
-                        </a>
-                    </li>
-                    <li>
-                        <a href="events.html">
-                            
-                                Events
-                            <img src="assets/img/menu_events.svg" href="events.html" width="100%" />
-                            
-                        </a>
-                    </li>
-                    <li>
-                        <a href="designs.html">
-                            
-                                Designs
-                            <img src="assets/img/menu_designs.svg" href="designs.html" width="100%" />
-                            
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="bumps2"></div>
         </header>
         
         <div class="sh_wrapper">
@@ -94,34 +31,33 @@
                 <input id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()">
                 <input type="button" id="helpbutton" class="help_button" value=" ">
             <div class="bumps"></div>
-            <div class="bumps2"></div>
             </form> 
             <div class="clues" id="clues">
                 <div class="back_button back_button_hidden" id="backbutton" onclick="uiunfocus()"></div>
                 <div class="clue" id="1" >
-                    <img src="assets/img/hunt/hunt1.jpg" onclick="uifocus(1)" />
-                    <caption class="hint"></caption>
+                    <img src="assets/img/hunt/hunt1.jpg" onclick="uifocus(1)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp1" onclick="uifocus(1)" class="stamp stampt" />
                 </div>
-                <figure class="clue" id="2">
-                    <img src="assets/img/hunt/hunt2.jpg" onclick="uifocus(2)" />
-                    <caption class="hint"></caption>
-                </figure>
-                <figure class="clue" id="3">
-                    <img src="assets/img/hunt/hunt3.jpg" onclick="uifocus(3)" />
-                    <caption class="hint"></caption>
-                </figure>
-                <figure class="clue" id="4">
-                    <img src="assets/img/hunt/hunt4.jpg" onclick="uifocus(4)" />
-                    <caption class="hint"></caption>
-                </figure>
-                <figure class="clue" id="5">
-                    <img src="assets/img/hunt/hunt5.jpg" onclick="uifocus(5)" />
-                    <caption class="hint"></caption>
-                </figure>
-                <figure class="clue" id="6">
-                    <img src="assets/img/hunt/hunt6.jpg" onclick="uifocus(6)" />
-                    <caption class="hint"></caption>
-                </figure>
+                <div class="clue" id="2">
+                    <img src="assets/img/hunt/hunt2.jpg" onclick="uifocus(2)" class="clue_image" /> 
+                    <img src="assets/img/hunt/stamp.png" id="stamp2" onclick="uifocus(2)" class="stamp" />
+                </div>
+                <div class="clue" id="3">
+                    <img src="assets/img/hunt/hunt3.jpg" onclick="uifocus(3)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp3" onclick="uifocus(3)" class="stamp" />
+                </div>
+                <div class="clue" id="4">
+                    <img src="assets/img/hunt/hunt4.jpg" onclick="uifocus(4)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp4" onclick="uifocus(4)" class="stamp" />
+                </div>
+                <div class="clue" id="5">
+                    <img src="assets/img/hunt/hunt5.jpg" onclick="uifocus(5)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp5" onclick="uifocus(5)" class="stamp" />
+                </div>
+                <div class="clue" id="6">
+                    <img src="assets/img/hunt/hunt6.jpg" onclick="uifocus(6)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp6" onclick="uifocus(6)" class="stamp" />
+                </div>
             </div>
             <div class="help"></div>
         </div>

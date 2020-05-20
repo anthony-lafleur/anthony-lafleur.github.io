@@ -162,15 +162,8 @@
     display:none;
 }
 
-.clue > img {
+.clue_image {
     width:100%;
-}
-.hint {
-    z-index:2;
-}
-
-.help {
-    z-index:2;
 }
 textarea:focus, input:focus{
     outline: none;

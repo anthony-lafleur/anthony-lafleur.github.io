@@ -1,18 +1,18 @@
-var keyword_1 = "lighthouse1";
-var keyword_2 = "lighthouse2";
-var keyword_3 = "lighthouse3";
-var keyword_4 = "lighthouse4";
-var keyword_5 = "lighthouse5";
-var keyword_6 = "lighthouse6";
+var keyword_1 = "1";
+var keyword_2 = "2";
+var keyword_3 = "3";
+var keyword_4 = "4";
+var keyword_5 = "5";
+var keyword_6 = "6";
 
 var current_selected = "default";
 
-var key1 = false;
-var key2 = false;
-var key3 = false;
-var key4 = false;
-var key5 = false;
-var key6 = false;
+var key_1 = false;
+var key_2 = false;
+var key_3 = false;
+var key_4 = false;
+var key_5 = false;
+var key_6 = false;
 
 
 function uifocus(x) {
@@ -53,6 +53,8 @@ function wawa() {
     if (current_selected == 1) {
         if ( x == keyword_1) {
             console.log("good job");
+            document.getElementById("stamp1").classList.add('stampt');
+            window.key_1 = true;
         } else {
             console.log("bad boy");
         };
@@ -60,6 +62,7 @@ function wawa() {
     if (current_selected == 2) {
         if ( x == keyword_2) {
             console.log("good job");
+            document.getElementById("stamp2").classList.add('stampt');
         } else {
             console.log("bad boy");
         };
@@ -67,6 +70,7 @@ function wawa() {
     if (current_selected == 3) {
         if ( x == keyword_3) {
             console.log("good job");
+            document.getElementById("stamp3").classList.add('stampt');
         } else {
             console.log("bad boy");
         };
@@ -74,6 +78,7 @@ function wawa() {
     if (current_selected == 4) {
         if ( x == keyword_4) {
             console.log("good job");
+            document.getElementById("stamp4").classList.add('stampt');
         } else {
             console.log("bad boy");
         };
@@ -81,6 +86,7 @@ function wawa() {
     if (current_selected == 5) {
         if ( x == keyword_5) {
             console.log("good job");
+            document.getElementById("stamp5").classList.add('stampt');
         } else {
             console.log("bad boy");
         };
@@ -88,8 +94,13 @@ function wawa() {
     if (current_selected == 6) {
         if ( x == keyword_6) {
             console.log("good job");
+            document.getElementById("stamp6").classList.add('stampt');
         } else {
             console.log("bad boy");
         };
     };
 };
+
+function wincheck() {
+    console.log(key_1);
+}
