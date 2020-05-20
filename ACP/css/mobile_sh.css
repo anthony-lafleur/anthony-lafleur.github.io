@@ -12,8 +12,8 @@
     justify-content: center;
     overflow:hidden;
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
-    background-color: #c5b4f4;
-    /* background-image:url(../assets/img/pattern-dots.png); */
+    background-color: #e6dfc3;
+    background-image:url(../assets/img/pattern-dots.png); 
 } 
 
 .bar_wrapper {
@@ -22,7 +22,7 @@
     left:0px;
     width:100%;
     height:100px;
-    background-color:#f8eebc;
+    background-color:#f5f7e1;
     box-shadow:0px -1px 15px rgba(0,0,0,0.16);
     z-index:2;
 }
@@ -60,9 +60,9 @@
     padding-right:20px;
     
     font-size:28px;
-    background-color:white;
-    color:#807256;
-    border:6px solid #ebdea8;
+    background-color:#dfd6ad;
+    color:#845c24;
+    border:6px solid #bfa253;
     border-radius:100px;
     
     z-index:2;
@@ -72,15 +72,15 @@
 }
 .guess_button {
     position:absolute;
-    height:50px;
-    width:50px;
+    height:55px;
+    width:55px;
     top:22px;
     right:40px;
-    background-color:#5a5aaa;
+    background-color:#8a7a66;
     color:white;
     z-index:2;
     border-radius:100%;
-    border:4px solid rgba(255,255,255,0.36);
+    border:10px solid #f5f7e1;
     background-image:url('../assets/img/arrow.svg');
     background-repeat:no-repeat;
     background-size:65%;
@@ -143,7 +143,7 @@
     left:0px;
     width:100%;
     height:100%;
-    background-color:white;
+    background-color:#e6dfc3;
     z-index:500;
 }
 .loaded {
@@ -155,7 +155,7 @@
     width:300px;
     height:169px;
     z-index:1;
-    border:10px solid white;
+    border:10px solid #f4f1e3;
     background-color:whitesmoke;
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
     overflow:hidden;
