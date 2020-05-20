@@ -4,12 +4,12 @@ window.addEventListener('load', function () {
 
 
 
-var keyword_1 = "1";
-var keyword_2 = "2";
-var keyword_3 = "3";
-var keyword_4 = "4";
-var keyword_5 = "5";
-var keyword_6 = "6";
+var keyword_1 = "596";
+var keyword_2 = "108";
+var keyword_3 = "219";
+var keyword_4 = "326";
+var keyword_5 = "487";
+var keyword_6 = "368";
 
 var current_selected = "default";
 var TTW_stamp = 500;
