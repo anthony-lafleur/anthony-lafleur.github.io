@@ -3,7 +3,6 @@ window.addEventListener('load', function () {
 })
 
 
-    document.getElementById("clues").scrollBy(0, 400);
 
 var keyword_1 = "1";
 var keyword_2 = "2";
@@ -23,10 +22,10 @@ var key_4 = false;
 var key_5 = false;
 var key_6 = false;
 
-
 function uifocus(x) {
     if (focused == false) {
     disableScroll();
+    document.getElementById("clues").classList.add('clues_expanded');
     window.focused = true;
     window.current_selected = x;
     document.getElementById(x).scrollIntoView();
@@ -71,7 +70,9 @@ function uifocus(x) {
 }
 function uiunfocus() {
     enableScroll();
+  document.getElementById("clues").classList.remove('clues_expanded');
     window.focused = false;
+    document.getElementById(window.current_selected).scrollIntoView();
     var i;
     for (i = 1; i < 7; i++) {
         document.getElementById(i).classList.remove('clue_hide');
