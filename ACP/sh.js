@@ -53,17 +53,25 @@ function uiunfocus() {
     wincheck();
 }
 
+function stamp(x) {
+            document.getElementById("stamp" + x).classList.add('stampt');
+            var y = "key_" + x;
+            console.log(y);
+            window.key_1 = true;
+}
+
+
+
+
 function wawa() {
-    hideKeyboard();
   var x = document.getElementById('guess').value;
     console.log("the users input was '" + x + "'");
-  /* document.getElementById('alert').innerHTML = 'The user input is: ' + x;*/
     console.log("the current selected image is hunt" + current_selected + ".jpg");
     if (current_selected == 1) {
         if ( x == keyword_1) {
             console.log("good job");
-            document.getElementById("stamp1").classList.add('stampt');
-            window.key_1 = true;
+            hideKeyboard();
+            setTimeout(function(){ stamp(1); }, 3000);
         } else {
             console.log("bad boy");
         };
