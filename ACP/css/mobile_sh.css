@@ -83,7 +83,7 @@
     color:#f5f7e1;
     z-index:2;
     border-radius:100%;
-    border:10px solid #f5f7e1;
+    border:8px solid #f5f7e1;
     background-image:url('../assets/img/arrow.svg');
     background-repeat:no-repeat;
     background-size:65%;
@@ -91,6 +91,7 @@
     transform: rotate(180deg) scale(1);
     cursor:pointer;
     transition:all 0.1s;
+    box-shadow:0px -1px 2px rgba(0,0,0,0.26);
 }
 .guess_button_hidden {
     transform: rotate(180deg) scale(0);
@@ -100,31 +101,24 @@
     position:absolute;
     height:50px;
     width:50px;
-    top:17px;
-    left:50%;
-    margin-left:78px;
-    background-color:#ff3f3f;
-    color:white;
+    top:22px;
+    right:28px;
+    background-color:#8a7a66;
+    color:#f5f7e1;
     z-index:2;
     border-radius:100%;
-    border:6px solid #ebdea8;
-    transform:scale(1);
-    cursor:pointer;
+    border:10px solid #f5f7e1;
     background-image:url('../assets/img/help.svg');
     background-repeat:no-repeat;
-    background-size:50%;
-    background-position:center 8px;
-    text-align:center;
+    background-size:65%;
+    background-position:center;
+    cursor:pointer;
     transition:all 0.1s;
-}
-.help_button:hover {
-    height:50px;
-    width:50px;
-    border:3px solid #ebdea8;
-    background-position:center 10px;
+    transform: scale(1);
+    box-shadow:0px -1px 2px rgba(0,0,0,0.26);
 }
 .help_button_hidden {
-    display:none;
+    transform: scale(0);
 }
 
 .clues {
@@ -159,15 +153,21 @@
     height:169px;
     z-index:1;
     border:10px solid #f4f1e3;
+    border-bottom:45px solid #f4f1e3;
     background-color:whitesmoke;
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
-    overflow:hidden;
     border-radius:3px;
     margin:10px;
     transition:all 0.3s;
     cursor:pointer;
 }
-
+.hint {
+    margin-top:-30px;
+    margin-left:10px;
+    font-size:20px;
+    font-family: 'Permanent Marker', cursive;
+    transform: rotate(-4deg);
+}
 
 .clue_active {
     position:absolute;
@@ -188,13 +188,10 @@
 
 .stamp {
     background-color:#fefbe5;
-    box-shadow:1px 1px 5px rgba(0,0,0,0.26);
-    opacity:0.80;
-    backdrop-filter:blur(7px);
+    box-shadow:0px -1px 2px rgba(0,0,0,0.26);
     position:relative;
-    left:50%;
-    margin-left:-40px;
-    margin-top:-120px;
+    left:215px;
+    margin-top:-50px;
     width:80px;
     height:80px;
     border-radius:100%;
@@ -202,6 +199,32 @@
     transform:scale(1.4);
     transition:all 0.2s;
 }
+
+.stampt1 {
+    transform:scale(1) rotate(-6deg) !important;
+    opacity:1 !important;
+}
+.stampt2 {
+    transform:scale(1) rotate(3deg) !important;
+    opacity:1 !important;
+}
+.stampt3 {
+    transform:scale(1) rotate(-3deg) !important;
+    opacity:1 !important;
+}
+.stampt4 {
+    transform:scale(1) rotate(-6deg) !important;
+    opacity:1 !important;
+}
+.stampt5 {
+    transform:scale(1) rotate(3deg) !important;
+    opacity:1 !important;
+}
+.stampt6 {
+    transform:scale(1) rotate(-3deg) !important;
+    opacity:1 !important;
+}
+
 
 .clue_image {
     width:100%;
@@ -237,6 +260,7 @@ textarea:focus, input:focus{
     transition:all 0.1s;
     cursor:pointer;
     transform:scale(1);
+    box-shadow:0px -1px 2px rgba(0,0,0,0.26);
 }
 .back_button_hidden {
     transition:all 0.1s;

@@ -78,7 +78,7 @@ function uiunfocus() {
 }
 
 function stamp(x) {
-            document.getElementById("stamp" + x).classList.add('stampt');
+            document.getElementById("stamp" + x).classList.add('stampt' + x);
             wincheck();
 }
 
