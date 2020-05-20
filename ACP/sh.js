@@ -1,3 +1,9 @@
+window.addEventListener('load', function () {
+  alert("It's loaded!")
+})
+
+
+
 var keyword_1 = "1";
 var keyword_2 = "2";
 var keyword_3 = "3";
