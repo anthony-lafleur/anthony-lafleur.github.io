@@ -48,19 +48,7 @@ function uiunfocus() {
 }
 
 function wawa() {
-    
-    
-    
-    document.getElementById("guess").hidefocus = "true";
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    hideKeyboard();
   var x = document.getElementById('guess').value;
     console.log("the users input was '" + x + "'");
   /* document.getElementById('alert').innerHTML = 'The user input is: ' + x;*/
@@ -123,16 +111,19 @@ function wawa() {
 
 
 
-    function handle(e){
-        if(e.keyCode === 13){
-            e.preventDefault(); // Ensure it is only this code that rusn
+function handle(e){
+    if(e.keyCode === 13){
+        e.preventDefault(); // Ensure it is only this code that rusn
 
-            wawa();
-        }
-    }
+        wawa();
+    };
+};
 
 
-
+function hideKeyboard() {
+	document.activeElement.blur();
+	this.blur();
+};
 
 function wincheck() {
     console.log(key_1);
