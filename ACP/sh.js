@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
-  document.getElementById("loading_screen").classList.add('loaded');
+    setTimeout( function() { document.getElementById("loading_screen").classList.add('loading_1'); }, 250);
+    setTimeout( function() { document.getElementById("loading_screen").classList.add('loaded'); }, 750);
 })
 
 
