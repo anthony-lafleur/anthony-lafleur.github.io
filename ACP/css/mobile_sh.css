@@ -57,15 +57,15 @@
     left:50%;
     margin-left:-160px;
     width:320px;
-    height:75px;
-    padding-left:20px;
+    height:58px;
+    padding-left:1px;
     padding-right:20px;
     
     font-size:28px;
-    background-color:#dfd6ad;
+    background-color:rgba(0,0,0,0);
     color:#845c24;
-    border:6px solid #bfa253;
-    border-radius:100px;
+    border:none;
+    border-bottom:3px #845c24 dashed;
     
     z-index:2;
     transition: all 0.2s;
@@ -75,12 +75,12 @@
 }
 .guess_button {
     position:absolute;
-    height:55px;
-    width:55px;
+    height:50px;
+    width:50px;
     top:22px;
-    right:40px;
+    right:28px;
     background-color:#8a7a66;
-    color:white;
+    color:#f5f7e1;
     z-index:2;
     border-radius:100%;
     border:10px solid #f5f7e1;
@@ -93,7 +93,7 @@
     transition:all 0.1s;
 }
 .guess_button_hidden {
-    display:none;
+    transform: rotate(180deg) scale(0);
 }
 
 .help_button {
