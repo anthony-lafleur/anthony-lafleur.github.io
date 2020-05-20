@@ -73,7 +73,7 @@ function uiunfocus() {
   document.getElementById("guess").classList.add('bar_hidden');
   document.getElementById("backbutton").classList.add('back_button_hidden');
   document.getElementById("helpbutton").classList.remove('help_button_hidden');
-    document.getElementById("guess").value = "What's Different?";
+    document.getElementById("guess").value = "What's the code?";
     wincheck();
 }
 
