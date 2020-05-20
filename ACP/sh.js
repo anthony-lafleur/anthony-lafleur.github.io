@@ -14,6 +14,8 @@ var key_4 = false;
 var key_5 = false;
 var key_6 = false;
 
+    var field = document.getElementById('input1');
+field.setAttribute('type', 'text');
 
 function uifocus(x) {
     window.current_selected = x;
@@ -51,9 +53,6 @@ function wawa() {
     
     
     
-    var field = document.createElement('input');
-field.setAttribute('type', 'text');
-document.body.appendChild(field);
 
 setTimeout(function() {
     field.focus();
