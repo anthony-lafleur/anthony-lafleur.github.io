@@ -33,10 +33,33 @@ function uifocus(x) {
   console.log("clue #" + x + " removed hidden attr");
   document.getElementById(x).classList.add('clue_active');
   console.log("clue #" + x + " active");
-  document.getElementById("guessbutton").classList.remove('guess_button_hidden');
-  document.getElementById("guess").classList.remove('bar_hidden');
   document.getElementById("backbutton").classList.remove('back_button_hidden');
   document.getElementById("helpbutton").classList.add('help_button_hidden');
+    
+    if ( x == 1 && key_1 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
+    if ( x == 2 && key_2 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
+    if ( x == 3 && key_3 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
+    if ( x == 4 && key_4 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
+    if ( x == 5 && key_5 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
+    if ( x == 6 && key_6 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
 }
 function uiunfocus() {
     var i;
@@ -59,7 +82,10 @@ function stamp(x) {
             wincheck();
 }
 
-
+function hide_guess_bar() {
+  document.getElementById("guessbutton").classList.add('guess_button_hidden');
+  document.getElementById("guess").classList.add('bar_hidden');
+}
 
 
 function wawa() {
@@ -140,6 +166,7 @@ function handle(e){
 
 
 function hideKeyboard() {
+    hide_guess_bar()
 	document.activeElement.blur();
 	this.blur();
 };

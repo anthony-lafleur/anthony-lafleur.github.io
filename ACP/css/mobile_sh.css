@@ -5,7 +5,7 @@
     position:absolute;
     margin-left:auto;
     margin-right:auto;
-    top:60px;
+    top:0px;
     bottom:0px;
     display:flex;
     flex-wrap: wrap;
@@ -131,7 +131,7 @@
     justify-content: center;
     width:100%;
     height:auto;
-    top:10px;
+    top:0px;
     bottom:50px;
     padding:15px;
     padding-bottom:50px;
@@ -258,4 +258,5 @@ header {
     background-color:#f8eebc;
     background-image:none;
     box-shadow:0px 1px 15px rgba(0,0,0,0.16);
+    display:none;
 }
