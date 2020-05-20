@@ -131,8 +131,14 @@
     top:0px;
     bottom:-20px;
     padding:15px;
-    padding-bottom:100px;
+    padding-top:400px;
+    padding-bottom:400px;
     overflow:scroll;
+}
+
+.clues_focused {
+    padding-top:400px;
+    padding-bottom:400px;
 }
 .loading {
     position:fixed;

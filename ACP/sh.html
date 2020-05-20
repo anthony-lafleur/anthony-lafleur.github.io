@@ -14,6 +14,7 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Raleway:wght@800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        
         <link rel="icon" 
             type="image/png" 
             href="assets/img/favicon.png"> 
@@ -30,20 +31,20 @@
             
             <form autocomplete="off" class="bar_wrapper" action="#">
                 <input class="bar bar_hidden" type="text" id="guess" name="guess" onfocus="this.value=''" value="What's the code?" onkeypress="handle(event)"><br>
-                <button id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()"></button>
+                <button id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="uiunfocus()"></button>
+                <button class="back_button back_button_hidden" id="backbutton" onclick="uiunfocus()"></button>
             <div class="bumps"></div>
                 
                 <button type="button" id="helpbutton" class="help_button" value=" "></button>
             </form> 
             <div class="clues" id="clues">
-                <div class="back_button back_button_hidden" id="backbutton" onclick="uiunfocus()"></div>
                 <div class="clue" id="1" >
                     <img src="assets/img/hunt/hunt1.jpg" onclick="uifocus(1)" class="clue_image" />
                     <img src="assets/img/hunt/stamp.png" id="stamp1" onclick="uifocus(1)" class="stamp" />
                     <div class="hint">Orchard</div>
                 </div>
-                <div class="clue" id="2">
-                    <img src="assets/img/hunt/hunt2.jpg" onclick="uifocus(2)" class="clue_image" /> 
+                <div class="clue" id="2" href="#2">
+                    <img src="assets/img/hunt/hunt2.jpg" onclick="uifocus(2)" class="clue_image"/> 
                     <img src="assets/img/hunt/stamp.png" id="stamp2" onclick="uifocus(2)" class="stamp" />
                     <div class="hint">Look up</div>
                 </div>

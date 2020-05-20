@@ -3,6 +3,7 @@ window.addEventListener('load', function () {
 })
 
 
+    document.getElementById("clues").scrollBy(0, 400);
 
 var keyword_1 = "1";
 var keyword_2 = "2";
@@ -13,6 +14,7 @@ var keyword_6 = "6";
 
 var current_selected = "default";
 var TTW_stamp = 500;
+var focused = false;
 
 var key_1 = false;
 var key_2 = false;
@@ -23,7 +25,12 @@ var key_6 = false;
 
 
 function uifocus(x) {
+    if (focused == false) {
+    disableScroll();
+    window.focused = true;
     window.current_selected = x;
+    document.getElementById(x).scrollIntoView();
+    document.getElementById("clues").scrollBy(0, -200);
     var i;
     for (i = 1; i < 7; i++) {
         document.getElementById(i).classList.add('clue_hide');
@@ -61,7 +68,10 @@ function uifocus(x) {
       document.getElementById("guess").classList.remove('bar_hidden');
     }
 }
+}
 function uiunfocus() {
+    enableScroll();
+    window.focused = false;
     var i;
     for (i = 1; i < 7; i++) {
         document.getElementById(i).classList.remove('clue_hide');
@@ -70,9 +80,9 @@ function uiunfocus() {
         console.log("clue #" + i + " removed active attr");
     }
     document.getElementById("guessbutton").classList.add('guess_button_hidden');
-  document.getElementById("guess").classList.add('bar_hidden');
-  document.getElementById("backbutton").classList.add('back_button_hidden');
-  document.getElementById("helpbutton").classList.remove('help_button_hidden');
+    document.getElementById("guess").classList.add('bar_hidden');
+    document.getElementById("backbutton").classList.add('back_button_hidden');
+    document.getElementById("helpbutton").classList.remove('help_button_hidden');
     document.getElementById("guess").value = "What's the code?";
     wincheck();
 }
@@ -180,4 +190,48 @@ function wincheck() {
                 "Key #5:" + key_5 + "\n" +
                 "Key #6:" + key_6 + "\n"
                 );
+}
+
+
+
+// left: 37, up: 38, right: 39, down: 40,
+// spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
