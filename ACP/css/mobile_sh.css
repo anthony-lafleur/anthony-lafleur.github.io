@@ -328,6 +328,7 @@ header {
     background-image:url(../assets/img/pattern-dots.png); 
     transition:all 0.5s;
     opacity:1 !important;
+    padding:0px;
 }
 
 .win1 {
@@ -345,6 +346,7 @@ header {
     opacity:0;
     transition:all 0.5s;
     display:block !important;
+    padding:0px;
 }
 
 .win_hidden {
@@ -352,6 +354,17 @@ header {
 }
 
 
+.resident {
+    width:350px;
+    height:350px;
+    
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-150px;
+    margin-left:-175px;
+    border-radius:27px;
+}
 
 .resident_speech { 
     background-color:#fefbe5;
@@ -368,7 +381,7 @@ header {
     font-size:22px;
     border-radius:80px;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
-    opacity:0.80;
+    opacity:0.87;
     backdrop-filter:blur(7px);
     line-height: 1.2;
 }
@@ -394,6 +407,14 @@ header {
     
 }
 
+.resident_photo {
+    
+    position:absolute;
+    left:50%;
+    margin-left:-60px;
+    bottom:120px;
+    object-fit:cover;
+}
 
 /* -- Floating Animation -- */
 @keyframes float {
