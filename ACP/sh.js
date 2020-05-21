@@ -23,6 +23,14 @@ var key_4 = false;
 var key_5 = false;
 var key_6 = false;
 
+/*
+var key_1 = true;
+var key_2 = true;
+var key_3 = true;
+var key_4 = true;
+var key_5 = true;
+var key_6 = true;
+*/
 function uifocus(x) {
     if (focused == false) {
     disableScroll();
@@ -91,7 +99,7 @@ function uiunfocus() {
 
 function stamp(x) {
             document.getElementById("stamp" + x).classList.add('stampt' + x);
-            wincheck();
+            
 }
 
 function hide_guess_bar() {
@@ -192,6 +200,15 @@ function wincheck() {
                 "Key #5:" + key_5 + "\n" +
                 "Key #6:" + key_6 + "\n"
                 );
+    if ( key_1 == true &&
+       key_2 == true &&
+       key_3 == true &&
+       key_4 == true &&
+       key_5 == true &&
+       key_6 == true ) {
+    setTimeout( function() { document.getElementById("win_screen").classList.add('win1'); }, 250);
+    setTimeout( function() { document.getElementById("win_screen").classList.add('win'); }, 750);
+    }
 }
 
 
