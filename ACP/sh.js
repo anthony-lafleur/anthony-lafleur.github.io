@@ -254,3 +254,22 @@ function enableScroll() {
   window.removeEventListener('touchmove', preventDefault, wheelOpt);
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
+
+
+
+function winspeech() {
+    var text_1 = "Great Job!";
+    var x;
+    var y = text_1.length;
+    for (x = 0; x < y; x++) {
+        setTimeout(function() { document.getElementById("speech").innerHTML += text_1.charAt(x); }, x * 100);
+        console.log(text_1.charAt(x));
+    }
+}
+
+
+
+
+
+
+
