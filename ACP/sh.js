@@ -54,25 +54,21 @@ var key_7 = false;
 
 
 var text = [
-    /* Intro texts  */
-    [
-    "happy", "Hey! Glad you could make it to the party!", 
-    "normal", "I'm super excited to share this new game with you.",
-    "normal", "In a few moments I'm going to show you photos from around my island.",
-    "normal", "You can tap one of these photos to get a better look at it.",
-    "normal", "Each photo will lead you to a different location.",
-    "normal", "At each location you will find a 3 digit PIN.",
-    "bewild", "(or a puzzle to obtain a PIN)",
-    "normal", "Enter the PIN to receive a stamp.",
-    "normal", "Once you have collected all 6 stamps...",
-    "happy", "I'll tell you where to find me! (and your prize!)",
-    "greet", "Let the Scavenger Hunt begin!"
+    [ /* Intro texts  */
+    "happy"  , "Hey! Glad you could make it to the party!", 
+    "normal" , "I'm super excited to share this new game with you.",
+    "normal" , "In a few moments I'm going to show you photos from around my island.",
+    "normal" , "You can tap one of these photos to get a better look at it.",
+    "happy"  , "Each photo will lead you to a different location!",
+    "normal" , "At each location you will find a 3 digit PIN.",
+    "bewild" , "...or a puzzle to obtain a PIN.",
+    "normal" , "Enter the PIN to receive a stamp.",
+    "normal" , "Once you have collected all 7 stamps...",
+    "happy"  , "I'll tell you where to find me!",
+    "greet"  , "Let the Scavenger Hunt begin!"
     ],
     
-    
-    
-    /* Win texts */
-    [
+    [ /* Win texts */
     "normal", "Great Job!",
     "normal", "You've found and solved all of my puzzles!",
     "normal", "I suppose that means I should tell you where I am...",
