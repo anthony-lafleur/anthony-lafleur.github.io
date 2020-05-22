@@ -455,13 +455,14 @@ header {
   bottom: -3;
   left: 50%;
   margin-left:-20px;
-  opacity: 1;
   transform:scale(.5);
   animation: arrow 1s infinite alternate;
-    transition:all 0.2s;
+  transition:all 0.2s;
+  opacity: 1;
 }
 .arrow_hidden {
-    opacity:0 !important;
+    opacity:0.3 !important;
+  transition:all 0.2s;
 }
 
 

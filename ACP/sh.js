@@ -15,7 +15,7 @@ var keyword_6 = "368";
 
 var current_selected = "default";
 var TTW_stamp = 500;
-var characterwritetime = 1;
+var characterwritetime = 11;
 var focused = false;
 
 var key_1 = false;
@@ -49,7 +49,11 @@ var text = [
     /* Win texts */
     [
     "Great Job!",
-    "You've found and solved all of my puzzles!"
+    "You've found and solved all of my puzzles!",
+    "I suppose that means I should tell you where I am...",
+    "Maybe this is more fun if I just give you a clue!",
+    "Just kidding... I'm at the airport!",
+    "Thanks again for playing!"
     ]
            ];
 
