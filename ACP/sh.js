@@ -1,5 +1,6 @@
 window.addEventListener('load', function () {
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loading_1'); }, 250);
+    setTimeout( function() { document.getElementById("loading_screen").innerHTML = " "; }, 250);
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loaded'); }, 750);
     setTimeout( function() {  window.speech_instance = 0;continuee() }, 1100);
 })
@@ -32,15 +33,14 @@ var text = [
     [
     "Hey! Glad you could make it to the party!",
     "I'm super excited to share this new game with you.",
-    "In a few moments I'm going to show you some clues.",
-    "You can tap one of these clues to get a better look at it.",
-    "Each clue will lead you to a different location.",
+    "In a few moments I'm going to show you photos from around my island.",
+    "You can tap one of these photos to get a better look at it.",
+    "Each photo will lead you to a different location.",
     "At each location you will find a 3 digit PIN.",
     "(or a puzzle to obtain a PIN)",
     "Enter the PIN to receive a stamp.",
     "Once you have collected all 6 stamps...",
-    "I'll tell you where to find me!",
-    "Oh... and your prize...",
+    "I'll tell you where to find me! (and your prize!)",
     "Let the Scavenger Hunt begin!"
     ],
     
@@ -52,8 +52,7 @@ var text = [
     "You've found and solved all of my puzzles!",
     "I suppose that means I should tell you where I am...",
     "Maybe this is more fun if I just give you a clue!",
-    "Just kidding... I'm at the airport!",
-    "Thanks again for playing!"
+    "Just kidding... I'm at the airport! Thanks again for playing!"
     ]
            ];
 
