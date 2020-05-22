@@ -1,6 +1,7 @@
 window.addEventListener('load', function () {
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loading_1'); }, 250);
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loaded'); }, 750);
+    setTimeout( function() {  window.speech_instance = 0;continuee() }, 1100);
 })
 
 
@@ -14,6 +15,7 @@ var keyword_6 = "368";
 
 var current_selected = "default";
 var TTW_stamp = 500;
+var characterwritetime = 38;
 var focused = false;
 
 var key_1 = false;
@@ -23,14 +25,35 @@ var key_4 = false;
 var key_5 = false;
 var key_6 = false;
 
-/*
-var key_1 = true;
-var key_2 = true;
-var key_3 = true;
-var key_4 = true;
-var key_5 = true;
-var key_6 = true;
-*/
+
+
+var text = [
+    /* Intro texts  */
+    [
+    "Hey! Glad you could make it to the party!",
+    "I'm super excited to share this new game with you."
+    ],
+    
+    
+    
+    /* Win texts */
+    [
+    "Great Job!",
+    "You've found and solved all of my puzzles!"
+    ]
+           ];
+
+function forcewin() {
+window.key_1 = true;
+window.key_2 = true;
+window.key_3 = true;
+window.key_4 = true;
+window.key_5 = true;
+window.key_6 = true;
+    wincheck();
+}
+
+
 function uifocus(x) {
     if (focused == false) {
     disableScroll();
@@ -208,6 +231,7 @@ function wincheck() {
        key_6 == true ) {
     setTimeout( function() { document.getElementById("win_screen").classList.add('win1'); }, 250);
     setTimeout( function() { document.getElementById("win_screen").classList.add('win'); }, 750);
+    setTimeout( function() {  window.speech_instance = 1;window.speech_number = 0;continuee() }, 1100);
     }
 }
 
@@ -257,13 +281,38 @@ function enableScroll() {
 
 
 
-function winspeech() {
-    var text_1 = "Great Job!";
-    var x;
-    var y = text_1.length;
-    for (x = 0; x < y; x++) {
-        setTimeout(function() { document.getElementById("speech").innerHTML += text_1.charAt(x); }, x * 100);
-        console.log(text_1.charAt(x));
+function clearBox(elementID) {
+    document.getElementById(elementID).innerHTML = "";
+}
+
+
+
+
+
+
+var speech_instance = 0;
+var speech_number = 0;
+
+function continuee() {
+    disablettc();
+    
+    console.log("Playing speech blurb \nINSTANCE #" + speech_instance + "\nNUMBER #" + speech_number);
+    speech(speech_instance,speech_number);
+    window.speech_number += 1;
+}
+
+
+/* print speech */
+function speech(x,y) {
+    
+    if (text[x][y] == null) {
+        clearBox("speech");
+        setTimeout( function() { document.getElementById("win_screen").classList.remove('win1'); }, 500);
+        setTimeout( function() { document.getElementById("win_screen").classList.remove('win'); }, 0);
+    } else {    
+        clearBox("speech");
+        $("#speech").writeText(text[x][y]);
+        setTimeout(function(){ enablettc(); }, ( 10 + characterwritetime ) * text[x][y].length);
     }
 }
 
@@ -272,4 +321,31 @@ function winspeech() {
 
 
 
+
+function enablettc() {
+    document.getElementById("arrow").classList.remove('arrow_hidden');
+    document.getElementById("continue").classList.add('continue');
+    console.log("[TAP ENABLED]")
+}
+function disablettc() {
+    console.log("[TAP DISABLED]");
+    document.getElementById("continue").classList.remove('continue');
+    document.getElementById("arrow").classList.add('arrow_hidden');
+}
+
+(function($) {
+    $.fn.writeText = function(content) {
+        var contentArray = content.split(""),
+            current = 0,
+            elem = this;
+        setInterval(function() {
+            if(current < contentArray.length) {
+                elem.text(elem.text() + contentArray[current++]);
+            }
+        }, characterwritetime);
+    };
+    
+})(jQuery);
+    
+    
 
