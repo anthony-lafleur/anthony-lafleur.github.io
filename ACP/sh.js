@@ -1,6 +1,6 @@
 window.addEventListener('load', function () {
+    document.getElementById("loading_text").innerHTML = "Loaded.";
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loading_1'); }, 250);
-    setTimeout( function() { document.getElementById("loading_screen").innerHTML = " "; }, 250);
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loaded'); }, 750);
     setTimeout( function() {  showspeech() }, 800);
     setTimeout( function() {  window.speech_instance = 0;continuee() }, 1800);
