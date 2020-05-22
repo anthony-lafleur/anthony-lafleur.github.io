@@ -2,8 +2,31 @@ window.addEventListener('load', function () {
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loading_1'); }, 250);
     setTimeout( function() { document.getElementById("loading_screen").innerHTML = " "; }, 250);
     setTimeout( function() { document.getElementById("loading_screen").classList.add('loaded'); }, 750);
-    setTimeout( function() {  window.speech_instance = 0;continuee() }, 1100);
+    setTimeout( function() {  showspeech() }, 800);
+    setTimeout( function() {  window.speech_instance = 0;continuee() }, 1800);
 })
+
+function showspeech() {
+    setTimeout( function() { document.getElementById("speech").classList.remove('resident_speech_hidden'); }, 750);
+    setTimeout( function() { document.getElementById("name").classList.remove('resident_name_hidden'); }, 750);
+}
+
+
+function mood(x) {
+    console.log("Changing mood to '" + x + "'");
+    if ( x == "normal" ) {
+        document.getElementById("photo").src = "assets/img/hunt/tony_normal.png";
+    }
+    if ( x == "happy" ) {
+        document.getElementById("photo").src = "assets/img/hunt/tony_happy.png";
+    }
+    if ( x == "greet" ) {
+        document.getElementById("photo").src = "assets/img/hunt/tony_greeting.png";
+    }
+    if ( x == "bewild" ) {
+        document.getElementById("photo").src = "assets/img/hunt/tony_bewild.png";
+    }
+}
 
 
 
@@ -17,7 +40,7 @@ var keyword_7 = "111";
 
 var current_selected = "default";
 var TTW_stamp = 500;
-var characterwritetime = 11;
+var characterwritetime = 17;
 var focused = false;
 
 var key_1 = false;
@@ -33,28 +56,28 @@ var key_7 = false;
 var text = [
     /* Intro texts  */
     [
-    "Hey! Glad you could make it to the party!",
-    "I'm super excited to share this new game with you.",
-    "In a few moments I'm going to show you photos from around my island.",
-    "You can tap one of these photos to get a better look at it.",
-    "Each photo will lead you to a different location.",
-    "At each location you will find a 3 digit PIN.",
-    "(or a puzzle to obtain a PIN)",
-    "Enter the PIN to receive a stamp.",
-    "Once you have collected all 6 stamps...",
-    "I'll tell you where to find me! (and your prize!)",
-    "Let the Scavenger Hunt begin!"
+    "happy", "Hey! Glad you could make it to the party!", 
+    "normal", "I'm super excited to share this new game with you.",
+    "normal", "In a few moments I'm going to show you photos from around my island.",
+    "normal", "You can tap one of these photos to get a better look at it.",
+    "normal", "Each photo will lead you to a different location.",
+    "normal", "At each location you will find a 3 digit PIN.",
+    "bewild", "(or a puzzle to obtain a PIN)",
+    "normal", "Enter the PIN to receive a stamp.",
+    "normal", "Once you have collected all 6 stamps...",
+    "happy", "I'll tell you where to find me! (and your prize!)",
+    "greet", "Let the Scavenger Hunt begin!"
     ],
     
     
     
     /* Win texts */
     [
-    "Great Job!",
-    "You've found and solved all of my puzzles!",
-    "I suppose that means I should tell you where I am...",
-    "Maybe this is more fun if I just give you a clue!",
-    "Just kidding... I'm at the airport! Thanks again for playing!"
+    "normal", "Great Job!",
+    "normal", "You've found and solved all of my puzzles!",
+    "normal", "I suppose that means I should tell you where I am...",
+    "normal", "Maybe this is more fun if I just give you a clue!",
+    "normal", "Just kidding... I'm at the airport! Thanks again for playing!"
     ]
            ];
 
@@ -261,9 +284,13 @@ function wincheck() {
        key_5 == true &&
        key_6 == true  &&
        key_7 == true ) {
+        window.speech_instance = 1;
+        window.speech_number = 1;
+        window.speech_mood = 0;
+        mood("normal");
     setTimeout( function() { document.getElementById("win_screen").classList.add('win1'); }, 250);
     setTimeout( function() { document.getElementById("win_screen").classList.add('win'); }, 750);
-    setTimeout( function() {  window.speech_instance = 1;window.speech_number = 0;continuee() }, 1100);
+    setTimeout( function() {  continuee() }, 1100);
     }
 }
 
@@ -323,14 +350,17 @@ function clearBox(elementID) {
 
 
 var speech_instance = 0;
-var speech_number = 0;
+var speech_number = 1;
+var speech_mood = 0;
 
 function continuee() {
     disablettc();
     
     console.log("Playing speech blurb \nINSTANCE #" + speech_instance + "\nNUMBER #" + speech_number);
     speech(speech_instance,speech_number);
-    window.speech_number += 1;
+    mood(text[speech_instance][speech_mood]);
+    window.speech_number += 2;
+    window.speech_mood += 2;
 }
 
 

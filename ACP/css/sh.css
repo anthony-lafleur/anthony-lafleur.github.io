@@ -17,6 +17,16 @@
     display:none;
 } 
 
+body {
+    
+    background-color: #f5deaf;
+    background-image:url(../assets/img/pattern-dots.png); 
+    -moz-animation: none;
+    -webkit-animation:  none;
+    animation: none;
+}
+
+
 .resident {
     display:none;
 }

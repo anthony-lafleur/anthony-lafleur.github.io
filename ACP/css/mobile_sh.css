@@ -385,7 +385,7 @@ header {
 }
 
 .resident_speech { 
-    background-color:#fdf8e3;
+    background-color:rgba(253, 248, 227, 0.94);
     color:#807256;
     height:130px;
     
@@ -399,11 +399,19 @@ header {
     font-size:22px;
     border-radius:80px;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
-    opacity:0.87;
+    opacity:1;
     backdrop-filter:blur(7px);
     line-height: 1.2;
     text-align:left;
+    transform:scale(1);
+    transition:all 0.2s;
 }
+.resident_speech_hidden {
+    transform:scale(0);
+    bottom:50px;
+}
+
+
 .resident_name {
     background-color:#41d67a;
     min-width:50px;
@@ -423,7 +431,13 @@ header {
 	animation: float 3.3s ease-in-out infinite;
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
     font-size:18px;
+    transition:all 0.2s;
+    opacity:1;
     
+}
+
+.resident_name_hidden {
+    opacity:0;
 }
 
 .resident_photo {
