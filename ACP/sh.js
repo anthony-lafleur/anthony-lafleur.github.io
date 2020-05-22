@@ -15,7 +15,7 @@ var keyword_6 = "368";
 
 var current_selected = "default";
 var TTW_stamp = 500;
-var characterwritetime = 38;
+var characterwritetime = 1;
 var focused = false;
 
 var key_1 = false;
@@ -31,7 +31,17 @@ var text = [
     /* Intro texts  */
     [
     "Hey! Glad you could make it to the party!",
-    "I'm super excited to share this new game with you."
+    "I'm super excited to share this new game with you.",
+    "In a few moments I'm going to show you some clues.",
+    "You can tap one of these clues to get a better look at it.",
+    "Each clue will lead you to a different location.",
+    "At each location you will find a 3 digit PIN.",
+    "(or a puzzle to obtain a PIN)",
+    "Enter the PIN to receive a stamp.",
+    "Once you have collected all 6 stamps...",
+    "I'll tell you where to find me!",
+    "Oh... and your prize...",
+    "Let the Scavenger Hunt begin!"
     ],
     
     
@@ -116,7 +126,7 @@ function uiunfocus() {
     document.getElementById("guess").classList.add('bar_hidden');
     document.getElementById("backbutton").classList.add('back_button_hidden');
     document.getElementById("helpbutton").classList.remove('help_button_hidden');
-    document.getElementById("guess").value = "What's the code?";
+    document.getElementById("guess").value = "PIN";
     wincheck();
 }
 
