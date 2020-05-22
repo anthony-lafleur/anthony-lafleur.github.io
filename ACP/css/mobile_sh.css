@@ -439,10 +439,10 @@ header {
 
 @keyframes arrow {
 	0% {
-		transform: scale(0.50)   translatey(0px);
+		transform: scale(0.50)   translatey(2px);
 	}
 	50% {
-		transform: scale(0.52)  translatey(-4px);
+		transform: scale(0.52)  translatey(-1px);
 	}
 	100% {
 		transform:  scale(0.50)  translatey(2px);
@@ -456,13 +456,12 @@ header {
   left: 50%;
   margin-left:-20px;
   transform:scale(.5);
-  animation: arrow 1s infinite alternate;
-  transition:all 0.2s;
+  animation: arrow 0.8s infinite alternate;
   opacity: 1;
 }
 .arrow_hidden {
-    opacity:0.3 !important;
-  transition:all 0.2s;
+    opacity:0.2 !important;
+  animation: arrow 0s infinite alternate;
 }
 
 

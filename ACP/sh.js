@@ -319,14 +319,18 @@ function continuee() {
 /* print speech */
 function speech(x,y) {
     
-    if (text[x][y] == null) {
+    
+    
+    if ( speech_instance == 0 && text[x][y] == null) {
         clearBox("speech");
         setTimeout( function() { document.getElementById("win_screen").classList.remove('win1'); }, 500);
         setTimeout( function() { document.getElementById("win_screen").classList.remove('win'); }, 0);
+    } else if ( speech_instance == 1 && text[x][y] == null) {    
+        clearBox("speech");
     } else {    
         clearBox("speech");
         $("#speech").writeText(text[x][y]);
-        setTimeout(function(){ enablettc(); }, ( 10 + characterwritetime ) * text[x][y].length);
+        setTimeout(function(){ enablettc(); }, ( 2 + characterwritetime ) * text[x][y].length);
     }
 }
 
