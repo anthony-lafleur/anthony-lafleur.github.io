@@ -14,206 +14,26 @@
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
     background-color: #c5b4f4;
     /* background-image:url(../assets/img/pattern-dots.png); */
+    display:none;
 } 
 
-.bar_wrapper {
-    position:absolute;
-    bottom:-20px;
-    width:100%;
-    height:100px;
-    background-color:#f8eebc;
-    box-shadow:0px -1px 15px rgba(0,0,0,0.16);
-    z-index:2;
-}
-
-.bumps {
-    position:absolute;
-    top:-10px;
-    width:100%;
-    height:10px;
-    overflow:hidden;
-    background-image:url('../assets/img/bump-top-yellow.svg');
-    background-position:center;
-    z-index:2;
-}
-.bumps2 {
-    position:absolute;
-    top:75px;
-    width:100%;
-    height:10px;
-    overflow:hidden;
-    background-image:url('../assets/img/bump-top-yellow.svg');
-    background-position:center;
-    transform: rotate(180deg);
-    display:none;
-    z-index:2;
-}
-
-.bar {
-    position:absolute;
-    top:4px;
-    left:104px;
-    z-index:2;
-    border:none;
-    background-image:url('../assets/img/bubble_bump.svg');
-    background-size:cover;
-    background-color:#f8eebc;
-    height:75px;
-    width:437px;
-    padding-left:20px;
-    font-size:28px;
-    color:#807256;
-}
-.bar_hidden {
-    display:none;
-}
-.guess_button {
-    position:absolute;
-    height:50px;
-    width:50px;
-    top:17px;
-    left:479px;
-    background-color:#5a5aaa;
-    color:white;
-    z-index:2;
-    border-radius:100%;
-    border:4px solid rgba(255,255,255,0.36);
-    background-image:url('../assets/img/arrow.svg');
-    background-repeat:no-repeat;
-    background-size:65%;
-    background-position:center;
-    transform: rotate(180deg) scale(1);
-    cursor:pointer;
-    transition:all 0.1s;
-}
-.guess_button_hidden {
+.resident {
     display:none;
 }
 
-.guess_button:hover {
-    transform: rotate(180deg) scale(1.1);
-}
-.help_button {
-    position:absolute;
-    height:50px;
-    width:50px;
-    top:17px;
-    right:115px;
-    background-color:#ff3f3f;
-    color:white;
-    z-index:2;
-    border-radius:100%;
-    border:6px solid #ebdea8;
-    transform:scale(1);
-    cursor:pointer;
-    background-image:url('../assets/img/help.svg');
-    background-repeat:no-repeat;
-    background-size:50%;
-    background-position:center 8px;
+.openednotonmobile {
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    padding-top:300px;
     text-align:center;
-    transition:all 0.1s;
-}
-.help_button:hover {
-    height:50px;
-    width:50px;
-    border:3px solid #ebdea8;
-    background-position:center 10px;
 }
 
-.clues {
-    position:absolute;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width:730px;
-    height:359px;
-    padding:15px;
-    padding-bottom:50px;
-    overflow-y:scroll;
-}
-
-.clue {
-    top:30px;
-    margin:0px;
-    width:300px;
-    height:169px;
-    z-index:1;
-    border:10px solid white;
-    background-color:whitesmoke;
-    box-shadow:1px 1px 5px rgba(0,0,0,0.36);
-    overflow:hidden;
-    border-radius:3px;
-    margin:10px;
-    transition:all 0.3s;
-    cursor:pointer;
-}
-
-.clue:hover {
-    transform:rotate(-1deg);
-}
-
-.clue_active {
-    width:600px;
-    height:338px;
-    transform:rotate(-1deg);
-    cursor:default;
-}
-.clue_hide {
+header {
     display:none;
 }
-
-.clue_image {
-    width:100%;
-}
-textarea:focus, input:focus{
-    outline: none;
-}
-
-.back_button {
-    position:absolute;
-    height:50px;
-    width:50px;
-    top:17px;
-    right:0px;
-    background-color:#5a5aaa;
-    color:white;
-    z-index:2;
-    border-radius:100%;
-    border:4px solid rgba(255,255,255,0.36);
-    background-image:url('../assets/img/x.svg');
-    background-repeat:no-repeat;
-    background-size:50%;
-    background-position:center;
-    text-align:center;
-    transition:all 0.1s;
-    cursor:pointer;
-    transform:scale(1);
-}
-.back_button_hidden {
-    transition:all 0.1s;
-    transform:scale(0);
-}
-/* width */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-button {
-    background-color:rgba(0,0,0,0);
-    opacity:0;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    background-color:rgba(255,255,255,0.66);
-    border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background-color:#5a5aaa;
-    border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background-color:#5a5aaa;
+.loading {
+    display:none;
 }

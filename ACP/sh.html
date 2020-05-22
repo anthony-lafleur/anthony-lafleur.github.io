@@ -18,7 +18,7 @@
         <link rel="icon" 
             type="image/png" 
             href="assets/img/favicon.png"> 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     
     
@@ -27,8 +27,9 @@
             <div class="bumps2"></div>
         </header>
         
-        <div class="loading" id="loading_screen">loading...</div>
-        <div id="continue" class=" " onclick="continuee()"></div>
+        <div class="loading" id="loading_screen"><span>loading...</span></div>
+        <div id="continue" class=" " onclick="continuee()">
+        </div>
         <div class="win_hidden win1 win" id="win_screen">
             <div class="resident">
                 <img class="resident_photo" src="assets/img/hunt/tony1.png" width="120px;">
@@ -61,12 +62,13 @@
                 
             </div>
         </div>
+        <div class="openednotonmobile">Please open this page on a mobile device!</div>
         <div class="sh_wrapper">
             
             <form autocomplete="off" class="bar_wrapper">
                 <input class="bar bar_hidden" type="tel" id="guess" name="guess" onfocus="this.value=''" value="PIN" onkeypress="handle(event)"><br>
                 <button id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()"></button>
-                <button class="back_button back_button_hidden" id="backbutton" onclick="uiunfocus()"></button>
+                <div class="bbutton bbutton_hidden" id="backbutton" onclick="uiunfocus()"></div>
             <div class="bumps"></div>
                 
                 <button type="button" id="helpbutton" class="help_button" value=" "></button>
@@ -100,7 +102,12 @@
                 <div class="clue" id="6">
                     <img alt="Wheel" src="assets/img/hunt/wheel.jpg" onclick="uifocus(6)" class="clue_image" />
                     <img src="assets/img/hunt/stamp.png" id="stamp6" onclick="uifocus(6)" class="stamp" />
-                    <div class="hint">th<span style="font-weight: bold;">E</span> <span style="font-weight: bold;">F</span>en fa<span style="font-weight: bold;font-size:28px;">I</span>r</div>
+                    <div class="hint"><span style="font-size:16px;">th<span style="font-weight: bold; bold;font-size:18px;">E</span> <span style="font-weight: bold; bold;font-size:18px;">F</span>en f<span style="font-weight: bold;font-size:18px;">A</span>ir</span></div>
+                </div>
+                <div class="clue" id="7">
+                    <img alt="Look Out" src="assets/img/hunt/lookout.jpg" onclick="uifocus(7)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp7" onclick="uifocus(7)" class="stamp" />
+                    <div class="hint" style="transform:rotate(4deg);margin-top:-18px;margin-left:21px;">hyacinth</div>
                 </div>
             </div>
             <div class="help"></div>

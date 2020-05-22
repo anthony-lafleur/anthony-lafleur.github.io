@@ -1,3 +1,11 @@
+.loading > span {
+   position: absolute;
+   bottom: 36px;
+   left: 15px;
+}
+
+
+
 .sh_wrapper {
     width:100%;
     height:auto;
@@ -238,6 +246,10 @@
     transform:scale(1) rotate(-3deg) !important;
     opacity:1 !important;
 }
+.stampt7 {
+    transform:scale(1) rotate(8deg) !important;
+    opacity:1 !important;
+}
 
 
 .clue_image {
@@ -254,10 +266,10 @@ textarea:focus, input:focus{
     outline: none;
 }
 
-.back_button {
+.bbutton {
     position:absolute;
-    height:50px;
-    width:50px;
+    height:35px;
+    width:35px;
     top:-77px;
     right:28px;
     background-color:#8a7a66;
@@ -273,7 +285,7 @@ textarea:focus, input:focus{
     cursor:pointer;
     transition:all 0.1s;
 }
-.back_button_hidden {
+.bbutton_hidden {
     transition:all 0.1s;
     transform: rotate(0deg) scale(0);
 }
@@ -364,7 +376,7 @@ header {
     width:350px;
     height:350px;
     
-    position:absolute;
+    position:fixed;
     top:50%;
     left:50%;
     margin-top:-150px;
@@ -437,13 +449,17 @@ header {
 
 
 
-
-
 @keyframes arrow {
 	0% {
 		transform: scalex(0.5) scaley(0.45)   translatey(3px);
 	}
+	45% {
+		transform: scalex(0.5) scaley(0.52)  translatey(-5px);
+	}
 	50% {
+		transform: scalex(0.5) scaley(0.52)  translatey(-5px);
+	}
+	55% {
 		transform: scalex(0.5) scaley(0.52)  translatey(-5px);
 	}
 	100% {

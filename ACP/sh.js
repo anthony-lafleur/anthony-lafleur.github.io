@@ -12,7 +12,8 @@ var keyword_2 = "108";
 var keyword_3 = "219";
 var keyword_4 = "326";
 var keyword_5 = "487";
-var keyword_6 = "368";
+var keyword_6 = "387";
+var keyword_7 = "111";
 
 var current_selected = "default";
 var TTW_stamp = 500;
@@ -25,6 +26,7 @@ var key_3 = false;
 var key_4 = false;
 var key_5 = false;
 var key_6 = false;
+var key_7 = false;
 
 
 
@@ -63,6 +65,7 @@ window.key_3 = true;
 window.key_4 = true;
 window.key_5 = true;
 window.key_6 = true;
+window.key_7 = true;
     wincheck();
 }
 
@@ -76,7 +79,7 @@ function uifocus(x) {
     document.getElementById(x).scrollIntoView();
     document.getElementById("clues").scrollBy(0, -200);
     var i;
-    for (i = 1; i < 7; i++) {
+    for (i = 1; i < 8; i++) {
         document.getElementById(i).classList.add('clue_hide');
     }
   console.log("all clues hidden")
@@ -84,7 +87,7 @@ function uifocus(x) {
   console.log("clue #" + x + " removed hidden attr");
   document.getElementById(x).classList.add('clue_active');
   console.log("clue #" + x + " active");
-  document.getElementById("backbutton").classList.remove('back_button_hidden');
+  document.getElementById("backbutton").classList.remove('bbutton_hidden');
   document.getElementById("helpbutton").classList.add('help_button_hidden');
     
     if ( x == 1 && key_1 == false ) {
@@ -111,6 +114,10 @@ function uifocus(x) {
       document.getElementById("guessbutton").classList.remove('guess_button_hidden');
       document.getElementById("guess").classList.remove('bar_hidden');
     }
+    if ( x == 7 && key_7 == false ) {
+      document.getElementById("guessbutton").classList.remove('guess_button_hidden');
+      document.getElementById("guess").classList.remove('bar_hidden');
+    }
 }
 }
 function uiunfocus() {
@@ -119,7 +126,7 @@ function uiunfocus() {
     window.focused = false;
     document.getElementById(window.current_selected).scrollIntoView();
     var i;
-    for (i = 1; i < 7; i++) {
+    for (i = 1; i < 8; i++) {
         document.getElementById(i).classList.remove('clue_hide');
         console.log("clue #" + i + " unhidden")
         document.getElementById(i).classList.remove('clue_active');
@@ -127,7 +134,7 @@ function uiunfocus() {
     }
     document.getElementById("guessbutton").classList.add('guess_button_hidden');
     document.getElementById("guess").classList.add('bar_hidden');
-    document.getElementById("backbutton").classList.add('back_button_hidden');
+    document.getElementById("backbutton").classList.add('bbutton_hidden');
     document.getElementById("helpbutton").classList.remove('help_button_hidden');
     document.getElementById("guess").value = "PIN";
     wincheck();
@@ -208,6 +215,16 @@ function wawa() {
             console.log("bad boy");
         };
     };
+    if (current_selected == 7) {
+        if ( x == keyword_7) {
+            console.log("good job");
+            hideKeyboard();
+            setTimeout(function(){ stamp(7); }, TTW_stamp);
+            window.key_7 = true;
+        } else {
+            console.log("bad boy");
+        };
+    };
 };
 
 
@@ -234,14 +251,16 @@ function wincheck() {
                 "Key #3:" + key_3 + "\n" +
                 "Key #4:" + key_4 + "\n" +
                 "Key #5:" + key_5 + "\n" +
-                "Key #6:" + key_6 + "\n"
+                "Key #6:" + key_6 + "\n" +
+                "Key #6:" + key_7 + "\n"
                 );
     if ( key_1 == true &&
        key_2 == true &&
        key_3 == true &&
        key_4 == true &&
        key_5 == true &&
-       key_6 == true ) {
+       key_6 == true  &&
+       key_7 == true ) {
     setTimeout( function() { document.getElementById("win_screen").classList.add('win1'); }, 250);
     setTimeout( function() { document.getElementById("win_screen").classList.add('win'); }, 750);
     setTimeout( function() {  window.speech_instance = 1;window.speech_number = 0;continuee() }, 1100);
