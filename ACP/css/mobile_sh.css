@@ -163,7 +163,7 @@
     transition:all 1s;
     opacity:1;
     font-family:default;
-    color:red;
+    color:#a7a7a7;
 }
 .loading_1 {
     opacity:0 !important;
