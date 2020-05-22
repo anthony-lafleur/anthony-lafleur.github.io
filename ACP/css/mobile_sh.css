@@ -446,6 +446,15 @@ header {
     margin-left:-59px;
     bottom:95px;
     object-fit:cover;
+    height:auto;
+}
+.resident_photo_hidden {
+    position:absolute;
+    left:50%;
+    margin-left:-59px;
+    bottom:95px;
+    object-fit:cover;
+    height:0px !important;
 }
 
 /* -- Floating Animation -- */

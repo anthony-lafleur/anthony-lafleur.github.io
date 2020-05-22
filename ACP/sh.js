@@ -14,17 +14,21 @@ function showspeech() {
 
 function mood(x) {
     console.log("Changing mood to '" + x + "'");
+        document.getElementById("photo_normal").classList.add("resident_photo_hidden");
+        document.getElementById("photo_happy").classList.add("resident_photo_hidden");
+        document.getElementById("photo_greet").classList.add("resident_photo_hidden");
+        document.getElementById("photo_bewild").classList.add("resident_photo_hidden");
     if ( x == "normal" ) {
-        document.getElementById("photo").src = "assets/img/hunt/tony_normal.png";
+        document.getElementById("photo_normal").classList.remove("resident_photo_hidden");
     }
     if ( x == "happy" ) {
-        document.getElementById("photo").src = "assets/img/hunt/tony_happy.png";
+        document.getElementById("photo_happy").classList.remove("resident_photo_hidden");
     }
     if ( x == "greet" ) {
-        document.getElementById("photo").src = "assets/img/hunt/tony_greeting.png";
+        document.getElementById("photo_greet").classList.remove("resident_photo_hidden");
     }
     if ( x == "bewild" ) {
-        document.getElementById("photo").src = "assets/img/hunt/tony_bewild.png";
+        document.getElementById("photo_bewild").classList.remove("resident_photo_hidden");
     }
 }
 
