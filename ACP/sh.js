@@ -73,11 +73,11 @@ var text = [
     ],
     
     [ /* Win texts */
-    "normal", "Great Job!",
-    "normal", "You've found and solved all of my puzzles!",
+    "happy", "Great Job!",
+    "greet", "You've found and solved all of my puzzles!",
     "normal", "I suppose that means I should tell you where I am...",
-    "normal", "Maybe this is more fun if I just give you a clue!",
-    "normal", "Just kidding... I'm at the airport! Thanks again for playing!"
+    "bewild", "Maybe this is more fun if I just give you a clue!",
+    "happy", "Just kidding... I'm at the airport! Thanks again for playing!"
     ]
            ];
 
@@ -356,6 +356,8 @@ var speech_mood = 0;
 function continuee() {
     disablettc();
     
+    
+    
     console.log("Playing speech blurb \nINSTANCE #" + speech_instance + "\nNUMBER #" + speech_number);
     speech(speech_instance,speech_number);
     mood(text[speech_instance][speech_mood]);
@@ -373,8 +375,10 @@ function speech(x,y) {
         clearBox("speech");
         setTimeout( function() { document.getElementById("win_screen").classList.remove('win1'); }, 500);
         setTimeout( function() { document.getElementById("win_screen").classList.remove('win'); }, 0);
-    } else if ( speech_instance == 1 && text[x][y] == null) {    
+    } else if ( speech_instance == 1 && speech_number == 9 ) {    
         clearBox("speech");
+        $("#speech").writeText(text[x][y]);
+        console.log("end");
     } else {    
         clearBox("speech");
         $("#speech").writeText(text[x][y]);
