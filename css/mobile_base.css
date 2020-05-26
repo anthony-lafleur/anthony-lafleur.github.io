@@ -274,7 +274,27 @@ a:active {
 
 
 
+article {
+    width:100%;
+    color:white;
+}
+article > p {
+    padding:15px;
+}
 
+figure {
+    width:100%;
+    justify-content: center;
+    margin:0;
+    font-size:0px;
+    text-align:center;
+    padding-top:15px;
+}
+figure > img {
+    position:relative;
+    margin:10px;
+    
+}
 
 
 
