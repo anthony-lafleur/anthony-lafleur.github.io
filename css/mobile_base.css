@@ -141,7 +141,7 @@ h1 > a {
     background-color:white;
     margin-left:8px;
     margin-top:8px;
-    border-radius:3px;
+    border-radius:12px;
     text-align:center;
     overflow:hidden;
     cursor: pointer;
@@ -158,7 +158,7 @@ h1 > a {
     transition:0.2s all;
 }
 .item_cover:hover {
-    opacity:0;
+    opacity:0.5;
 }
 .card_title {
     position:absolute;
@@ -169,12 +169,12 @@ h1 > a {
     
     height:110px;
     width:110px;
-    border-radius:100%;
-    background-color:rgba(255,255,255,0.95);
+    border-radius:12px;
+    background-color:rgba(255,255,255,1);
     letter-spacing: -1px;
     font-weight: 600;
     color:#6a6a6a;
-    transform:scale(.9);
+    transform:scale(.83);
 }
 .card_main_title {
     position:absolute;
