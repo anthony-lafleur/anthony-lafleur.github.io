@@ -1,12 +1,13 @@
-
+:root {
+  --bg-color-DARK: #1d1d1d;  
+}
 
 
 
 
 
 body {
-    background-color:#505050;
-    background-color:#1d1d1d;
+    background-color:var(--bg-color-DARK);
     color:#555;
     font-family: 'Dosis', sans-serif;
 }
@@ -39,7 +40,7 @@ header > img {
 }
 nav {
     position:absolute;
-    top:20px;
+    top:22px;
     right:0px;
     width:118px;
     background-color:red;
@@ -71,7 +72,7 @@ nav > ul > li {
 }
 nav > ul:nth-child(2) > li {
     cursor:pointer;
-    font-weight:300;
+    font-weight:600;
 }
 nav > ul > li:hover {
     font-weight:600;
@@ -114,8 +115,15 @@ h1 > a {
     display:none;
 }
 
-.item > img {
-    object-fit: cover;
+.card_image {
+    
+}
+
+.card_image_acsh {
+    position:absolute;
+    top:25px;
+    left:50%;
+    margin-left:-48px;
 }
 
 
@@ -129,10 +137,10 @@ h1 > a {
 
 /* Cards */
 .item {
-    width: 48%;
+    width: 46.4%;
     background-color:white;
-    margin-left:5px;
-    margin-top:5px;
+    margin-left:8px;
+    margin-top:8px;
     border-radius:11px;
     text-align:center;
     overflow:hidden;
@@ -157,7 +165,7 @@ h1 > a {
     top:50%;
     left:50%;
     margin-top:-50px;
-    margin-left:-50px;
+    margin-left:-52px;
     
     height:110px;
     width:110px;
@@ -166,6 +174,7 @@ h1 > a {
     letter-spacing: -1px;
     font-weight: 600;
     color:#6a6a6a;
+    transform:scale(.9);
 }
 .card_main_title {
     position:absolute;
@@ -209,7 +218,7 @@ h1 > a {
 }
 .item_acsh {
     
-    background-color: #f5deaf;
+    background-color: #a7f5be;
     background-image:url(../ACP/assets/img/pattern-dots.png); 
 }
 
@@ -256,6 +265,39 @@ a:hover {
 }
 
 a:active {
+    text-decoration: none;
+    color:#efefef !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li > a:link {
+    text-decoration: none;
+    color:#555 !important;
+}
+
+li > a:visited {
+    text-decoration: none;
+    color:#555 !important;
+}
+
+li > a:hover {
+    text-decoration: none;
+    color:#555 !important;
+}
+
+li > a:active {
     text-decoration: none;
     color:#efefef !important;
 }
