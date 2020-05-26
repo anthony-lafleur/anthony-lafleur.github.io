@@ -164,16 +164,6 @@ h1 > a {
 
 
 
-.outside_wrapper {
-    position:absolute;
-    top:0px;
-    left:230px;
-    right:105px;
-    bottom:0px;
-    width:auto;
-    height:auto;
-    overflow-y:scroll;
-}
 /* wrapper for cards */
 .wrapper {
     position:absolute;
