@@ -291,8 +291,8 @@ figure {
 }
 figure > img {
     position:relative;
-    margin:5px;
-    border-radius:3px;
+    margin:8px;
+    border-radius:12px;
     
 }
 
