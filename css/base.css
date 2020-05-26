@@ -170,6 +170,11 @@ h1 > a {
     padding:15px;
     justify-content: left;
 }
+.item_acsh {
+    
+    background-color: #f5deaf;
+    background-image:url(../ACP/assets/img/pattern-dots.png); 
+}
 
 /* width */
 ::-webkit-scrollbar {
@@ -198,3 +203,22 @@ h1 > a {
 }
 
 
+a:link {
+    text-decoration: none;
+    color:#555;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#555;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#555;
+}
+
+a:active {
+    text-decoration: none;
+    color:#555;
+}

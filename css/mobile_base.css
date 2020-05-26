@@ -6,14 +6,13 @@
 
 body {
     background-color:#505050;
+    background-color:#1d1d1d;
     color:#555;
     font-family: 'Dosis', sans-serif;
 }
 
 header {
-    position:fixed;
-    background-color:#1d1d1d;
-    box-shadow:1px 2px 10px rgba(0,0,0,0.36);
+    position:absolute;
     left:0px;
     top:0px;
     height:100px;
@@ -30,7 +29,7 @@ footer {
     width:100%;
     z-index:4;
     text-align:center;
-    box-shadow:1px 2px 10px rgba(0,0,0,0.36);
+    display:none;
 }
 header > img {
     background-color:lightgray;
@@ -40,18 +39,17 @@ header > img {
 }
 nav {
     position:absolute;
-    top:0px;
+    top:20px;
     right:0px;
-    left:0px;
+    width:118px;
     background-color:red;
     background-color:rgba(0,0,0,0);
-    box-shadow:1px 2px 10px rgba(0,0,0,0);
     height:100px;
     overflow:hidden;
 }
 nav > ul {
     position:absolute;
-    top:10px;
+    top:9px;
     right:0px;
     list-style: none;
     text-align:right;
@@ -59,11 +57,13 @@ nav > ul {
     width:100px;
     padding-top:0px;
     margin-top:0px;
+    font-size:20px;
+    font-weight:bold;
 }
 nav > ul:nth-child(2) {
-    text-align: left;
-    right:auto;
-    left:0px;
+}
+nav > ul:nth-child(1) {
+    display:none;
 }
 nav > ul > li {
     cursor:pointer;
@@ -78,13 +78,16 @@ nav > ul > li:hover {
     color:#d3d3d3;
 }
 h1 {
-    text-align:center;
-    font-size:24px;
+    text-align:left;
+    font-size:28px;
+    margin-left:15px;
     z-index:500;
+    margin-top:34px;
+    color:white !important;
 }
 h1 > a {
     text-decoration: none;
-    color:#d3d3d3;
+    color:#ffffff;
 }
 
 
@@ -115,23 +118,31 @@ h1 > a {
     object-fit: cover;
 }
 
+
+.item_inner_wrapper {
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+}
+
 /* Cards */
 .item {
-    width: 150px;
-    height: 200px;
+    width: 48%;
     background-color:white;
-    margin:7px;
+    margin-left:5px;
+    margin-top:5px;
     border-radius:11px;
     text-align:center;
     overflow:hidden;
     cursor: pointer;
-    box-shadow:1px 1px 3px rgba(0,0,0,0.36);
 }
 .item_cover {
-    position:relative;
-    top:-200px;
+    position:absolute;
+    top:0px;
     left:0px;
-    width:150px;
+    width:100%;
     display:flex;
     height:100%;
     text-align:center;
@@ -142,24 +153,34 @@ h1 > a {
     opacity:0;
 }
 .card_title {
-    width:170px;
-    margin:40px 15px 40px 15px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-50px;
+    
+    height:110px;
+    width:110px;
     border-radius:100%;
-    padding:36px 5px 25px 5px;
-    background-color:rgba(255,255,255,0.68);
-    box-shadow:1px 1px 5px rgba(0,0,0,0.36) inset;
+    background-color:rgba(255,255,255,0.95);
     letter-spacing: -1px;
     font-weight: 600;
-    backdrop-filter: blur(7px);
     color:#6a6a6a;
 }
 .card_main_title {
+    position:absolute;
+    top:33px;
+    left:0px;
+    width:100%;
     color:#1d1d1d;
 }
-
-.card_title_single_line {
-    padding:48px 5px 25px 5px;
+.card_main_sub_title {
+    position:absolute;
+    top:53px;
+    left:0px;
+    width:100%;
 }
+
 
 
 
@@ -177,20 +198,24 @@ h1 > a {
 /* wrapper for cards */
 .wrapper {
     position:absolute;
-    top:0px;
+    top:70px;
     left:0px;
-    right:0px;
+    width:100%;
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
     height:auto;
-    padding:15px;
-    justify-content: center;
+    justify-content: left;
+}
+.item_acsh {
+    
+    background-color: #f5deaf;
+    background-image:url(../ACP/assets/img/pattern-dots.png); 
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
     background-color:#505050;
 }
 
@@ -215,3 +240,22 @@ h1 > a {
 }
 
 
+a:link {
+    text-decoration: none;
+    color:#efefef !important;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#efefef !important;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#efefef !important;
+}
+
+a:active {
+    text-decoration: none;
+    color:#efefef !important;
+}
