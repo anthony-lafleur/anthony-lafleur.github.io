@@ -79,7 +79,7 @@ nav > ul > li:hover {
 h1 {
     text-align:left;
     font-size:28px;
-    margin-left:15px;
+    margin-left:20px;
     z-index:500;
     margin-top:34px;
     color:white !important;
@@ -195,8 +195,8 @@ h1 > a {
 .wrapper {
     position:absolute;
     top:130px;
-    left:0px;
-    width:100%;
+    left:2%;
+    width:96%;
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -268,7 +268,7 @@ article {
     overflow-x:hidden;
 }
 article > p {
-    padding:15px;
+    padding:20px;
     padding-top:5px;
     padding-bottom:0px;
     font-size:20px;
@@ -291,8 +291,8 @@ figure > img {
 .x {
     position:relative;
     margin:8px;
-    margin-left:15px;
-    margin-right:15px;
+    margin-left:16px;
+    margin-right:16px;
     border-radius:12px;
     
 }
