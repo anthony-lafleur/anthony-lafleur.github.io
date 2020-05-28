@@ -134,6 +134,14 @@ h1 > a {
     height:100%;
 }
 
+.resume_wrapper {
+    position:fixed;
+    top:135px;
+    left:0px;
+    right:0px;
+    bottom:60px;
+}
+
 /* Cards */
 .item {
     width: 46.4%;
@@ -194,8 +202,8 @@ h1 > a {
 }
 
 iframe {
-    position:relative;
-    top:145px;
+    position:absolute;
+    top:0px;
     left:0px;
     border:none;
     background-color:#262626;
