@@ -1,5 +1,5 @@
 :root {
-  --bg-color-DARK: #1d1d1d;  
+  --bg-color-DARK: #121212;  
 }
 
 
@@ -24,13 +24,13 @@ header {
 }
 footer {
     position:relative;
-    background-color:rgba(255,255,255,0.05);
     right:0px;
     margin-top:20px;
     height:60px;
     width:100%;
     z-index:4;
     text-align:center;
+    padding-bottom:50px;
 }
 header > img {
     background-color:lightgray;
@@ -301,49 +301,36 @@ figure > img {
 
 .arrow {
     position:absolute;
-    margin-top:19px;
-  border: solid rgba(255,255,255,0.48);
-  border-width: 0 4px 4px 0;
-  display: inline-block;
-  padding: 8px;
+    margin-top:8px;
+    border: solid rgba(255,255,255,0.48);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 8px;
 }
 .arrow_hidden {
-  border: solid rgba(255,255,255,0.05);
-  border-width: 0 4px 4px 0;
+    border: solid rgba(255,255,255,0.05);
+    border-width: 0 4px 4px 0;
 }
 .homebutton {
     position:absolute;
-    top:50%;
     left:50%;
     
-    margin-top:-13px;
-    margin-left:-7px;
+    margin-top:0px;
+    margin-left:-33px;
     
-    height:26px;
-    width:14px;
-    background-color:rgba(255,255,255,0.48);
-    border-radius:4px;
+    width:66px;
+    text-align:center;
+    color:rgba(255,255,255,0.48);
 }
-.homebutton:nth-of-type(3) {
-    margin-left:10px;
-}
-
-.homebutton:nth-of-type(2) {
-    margin-left:-24px;
-}
-
-
-
 .right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-    margin-left:70px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left:90px;
 }
-
 .left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-    margin-left:-90px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left:-110px;
 }
 
 
