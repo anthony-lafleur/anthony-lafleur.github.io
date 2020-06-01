@@ -375,3 +375,17 @@ li > a:active {
     text-decoration: none;
     color:#efefef !important;
 }
+
+
+time {
+    position: absolute;
+    top:2px;
+    right:25px;
+    padding:10px;
+    border-radius:12px;
+    background-color:rgba(0,0,0,0.38);
+    backdrop-filter:blur(18px);
+    -backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    transform:scale(0.9);
+}
