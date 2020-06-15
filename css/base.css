@@ -1,0 +1,231 @@
+
+:root {
+  --bg-color-DARK: #1d1d1d;  
+}
+
+
+
+
+body {
+    background-color:var(--bg-color-DARK);
+    color:#555;
+    font-family: 'Dosis', sans-serif;
+}
+
+header {
+    position:fixed;
+    background-color:#1d1d1d;
+    left:0px;
+    top:0px;
+    height:100%;
+    width:230px;
+    z-index:4;
+    text-align:center;
+}
+footer {
+    position:fixed;
+    background-color:#1d1d1d;
+    right:0px;
+    top:0px;
+    height:100%;
+    width:100px;
+    z-index:4;
+    text-align:center;
+}
+header > img {
+    background-color:lightgray;
+    border-radius:100%;
+    overflow:hidden;
+    margin-top:25px;
+}
+nav {
+}
+nav > ul {
+    list-style: none;
+    text-align:right;
+    padding:20px;
+    padding-left:45px;
+}
+nav > ul:nth-child(2) {
+    text-align: left;
+}
+nav > ul > li {
+    cursor:pointer;
+    font-weight:600;
+}
+nav > ul:nth-child(2) > li {
+    cursor:pointer;
+    font-weight:300;
+}
+nav > ul > li:hover {
+    font-weight:600;
+    color:#d3d3d3;
+}
+h1 {
+    text-align:center;
+    padding-right:20px;
+    padding-left:45px;
+}
+h1 > a {
+    text-decoration: none;
+    color:#d3d3d3;
+}
+
+
+
+
+
+.li_selected {
+    color:#d3d3d3;
+}
+
+
+
+.social_bar {
+    position:fixed;
+    top:0px;
+    right:0px;
+    width:200px;
+    height:50px;
+    z-index:3; 
+    background-color:rgba(255,255,255,0.73);
+    backdrop-filter: blur(13px);
+    border-radius:0px 0px 0px 9px;
+    display:none;
+}
+
+.item > img {
+    object-fit: cover;
+}
+
+/* Cards */
+.item {
+    width: 150px;
+    height: 200px;
+    background-color:white;
+    margin:7px;
+    border-radius:14px;
+    text-align:center;
+    overflow:hidden;
+    cursor: pointer;
+}
+.item_cover {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    display:flex;
+    height:100%;
+    text-align:center;
+    opacity:1;
+    transition:0.2s all;
+}
+
+.item_inner_wrapper {
+    position:relative;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+}
+.item_cover:hover {
+    opacity:0;
+}
+.card_title {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-52px;
+    
+    height:110px;
+    width:110px;
+    border-radius:100%;
+    background-color:rgba(255,255,255,0.95);
+    letter-spacing: -1px;
+    font-weight: 600;
+    color:#6a6a6a;
+    transform:scale(.82);
+}
+.card_main_title {
+    position:absolute;
+    top:33px;
+    left:0px;
+    width:100%;
+    color:#1d1d1d;
+}
+.card_main_sub_title {
+    position:absolute;
+    top:53px;
+    left:0px;
+    width:100%;
+}
+
+
+
+
+/* wrapper for cards */
+.wrapper {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    height:auto;
+    padding:15px;
+    justify-content: left;
+}
+.item_acsh {
+    
+    background-color: #f5deaf;
+    background-image:url(../ACP/assets/img/pattern-dots.png); 
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+    background-color:#505050;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color:#505050;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color:#1d1d1d;
+    border-radius:5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color:#1d1d1d;
+}
+/* Handle */
+::-webkit-scrollbar-button {
+    background-color:#505050;
+    height:20px;
+}
+
+
+a:link {
+    text-decoration: none;
+    color:#555;
+}
+
+a:visited {
+    text-decoration: none;
+    color:#555;
+}
+
+a:hover {
+    text-decoration: none;
+    color:#555;
+}
+
+a:active {
+    text-decoration: none;
+    color:#555;
+}

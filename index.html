@@ -1,75 +1,126 @@
-<!doctype html>
+<html>
+    <head>
+        <title>Anthony M. LaFleur</title>
+    
 
-<html lang="en">
-    
-<head>
-    <title>Anthony M. LaFleur</title>
-    <meta name="description" content="Anthony LaFleur - Portfolio">
-    <meta name="author" content="Anthony M. LaFleur">
-    <meta charset="utf-8">
-
-    <!-- STYLE SHEETS AND FONTS -->
-    <link rel = "stylesheet" type = "text/css" href = "style/base.css" />
-    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet" />
-    <link rel="icon" href="../img/favicon.svg" type="image/svg" sizes="16x16" />
-    
-    <!-- SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="script/rps.js"></script>
-                                                                                  
-</head>
-<body>
-    
-    <header>
-        <nav class="nav">
-            <img src="img/portrait.svg" class="headerIcon" height="90px" width="90px" alt="Header Icon"/>
-            <ul class="navigation">
-                <li><a class="navLink" href="#">Home</a></li>
-                <li><a class="navLink" href="#">About</a></li>
-                <!--<li><a class="navLink" href="#">Projects</a></li>-->
-                <li><a class="navLink" href="#">Contact</a></li>
-                <li><a class="navLink" href="#">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <div class="splash">
-        <div class="wave"></div>
-        <div class="wave"></div>
+        <meta name="author" content="Anthony LaFleur">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <div class="splashIntro">
-            <h1 class="splashTitle">Hi! I'm Tony.</h1>
-            <h2 class="splashTitle">I'm a Web Developer!</h2>
-        </div>
-    </div>
-    
-    
-    <div class="contentBG">
-        <div class="contentArea">
-            <article>
-                <h1>- ABOUT -</h1>
-                <p class="card">
-                    I am and always have been interested in coding and programming. In my freshman year of high school, I discovered how much fun building websites can be! After highscool at Westfield Technical Academy, I am currently enrolled at Champlain College Online as a part-time student and working as an full-time Au Pair.
-                    <br><br>
-                    When I'm not learning new programming skills or building silly websites and web games, I'm usually found either playing video games or hiking. I love to explore both the real world and fantasy worlds!
-                </p>
-            </article>
-            <article>
-                <h1>- CONTACT -</h1>
-                <form class="card" action="/action_page.php">
-                  Your Email
-                  <input type="text" name="firstname" value="">
-                  <br><br>
-                  Subject
-                  <input type="text" name="lastname" value="">
-                  <br><br>
-                  <input type="submit" value="Submit">
-                </form> 
-            </article>
-        </div>
-    </div>
-    
-</body>
-      
+        <link rel="stylesheet" media="screen and (min-width: 700px)" href="css/base.css" />
+        <link rel="stylesheet" media="screen and (max-width: 699.9px)" href="css/mobile_base.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <!--<img src="" width="80px" height="80px" />-->
+            <script>
+            
+            
+            jQuery(function(){
+                 jQuery('#showall').click(function(){
+                       jQuery('.item').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showall").addClass("li_selected");
+                     console.log(">show all");
+                });
+                 jQuery('#showweb').click(function(){
+                       jQuery('.prog').hide();
+                       jQuery('.art').hide();
+                       jQuery('.web').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showweb").addClass("li_selected");
+                     console.log(">hide prog + art\n>show web");
+                });
+                 jQuery('#showprog').click(function(){
+                       jQuery('.art').hide();
+                       jQuery('.web').hide();
+                       jQuery('.prog').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showprog").addClass("li_selected");
+                     console.log(">hide web + art\n>show prog");
+                });
+                 jQuery('#showart').click(function(){
+                       jQuery('.prog').hide();
+                       jQuery('.web').hide();
+                       jQuery('.art').show();
+                       $(".li_selected").removeClass("li_selected");
+                       $("#showart").addClass("li_selected");
+                     console.log(">hide prog + web\n>show art");
+                });
+            });
+            
+            
+            </script>
+            <h1>
+                <a href="index.html">
+                    <span style="letter-spacing: 4px;">ANTHONY</span>
+                    <br>
+                    <span style="letter-spacing: 5.7px;">LaFLEUR</span>
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li class="li_selected" id="showall">ALL WORK</li>
+                    <li id="showweb">WEB</li>
+                    <li id="showprog">PROGRAMMING</li>
+                    <li id="showart">DESIGN & ART</li>
+                </ul>
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="social_bar">social.</div>
+        <div class="wrapper">
+            
+            <a class="item web item_acsh" href="projects/acsh/animal_crossing_scavenger_hunt.html">
+                <div class="item_inner_wrapper">
+                    <img class="card_image" src="img/acsh.png" width="100%"/>
+                    <div class="item_cover">
+                        <h3 class="card_title">
+                            <span class="card_main_title">
+                                SCAVENGER HUNT
+                            </span>
+                            <span class="card_main_sub_title">
+                                Web App
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+            </a>
+            
+            
+            <!--
+            <div class="item web">
+                <img src="img/pizzaplace.jpg" height="200px" width="150px" />
+                <div class="item_cover">
+                    <h3 class="card_title"><span class="card_main_title">PIZZA PLACE</span><br>Restaurant</h3>
+                </div>
+            </div>
+            -->
+            
+            <a class="item web" style="background-color:#414840;" href="projects/kylepagephoto/kyle_page_photography.html">
+                <div class="item_inner_wrapper">
+                    <img class="card_image" src="img/kylepage.jpg" width="100%"/>
+                    <div class="item_cover">
+                        <h3 class="card_title">
+                            <span class="card_main_title">
+                                K.P. PHOTOGRAPHY
+                            </span>
+                            <span class="card_main_sub_title">
+                                Website
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+            </a>
+            
+            
+            
+            </div>
+    </body>
 </html>
