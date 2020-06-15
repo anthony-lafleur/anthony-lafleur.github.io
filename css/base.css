@@ -191,7 +191,8 @@ a:active {
 .wrapper {
     position:absolute;
     top:0px;
-    left:225px;
+    left:225px !important;
+    max-width:1000px;
     right:225px;
     display: flex;
     flex-direction:row;
