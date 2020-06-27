@@ -3,8 +3,17 @@
    bottom: 36px;
    left: 15px;
 }
+.openednotonmobile {
+    display:none;
+}
 
-
+body {
+    
+background: linear-gradient(180deg, #fea3aa, #f8b88b, #faf884, #baed91, #b2cefe, #f2a2e8);
+}
+body > img {
+    opacity:0;
+}
 
 .sh_wrapper {
     width:100%;
@@ -20,7 +29,6 @@
     justify-content: center;
     overflow:hidden;
     box-shadow:1px 1px 5px rgba(0,0,0,0.36);
-    background-color: #f5deaf;
     background-image:url(../assets/img/pattern-dots.png); 
 } 
 
@@ -323,7 +331,15 @@ header {
     display:none;
 }
 
-
+.win_cover {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    background-image:url(../assets/img/pattern-dots.png); 
+}
 
 .win {
     position:fixed;
@@ -331,15 +347,22 @@ header {
     left:0px;
     width:100%;
     height:100%;
-    background-color:#e6dfc3;
     z-index:500;
     padding:10px;
     text-align:center;
     font-size:28px;
-    background-image:url(../assets/img/pattern-dots.png); 
     transition:all 0.5s;
     opacity:1 !important;
     padding:0px;
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(180deg, #fea3aa, #f8b88b, #faf884, #baed91, #b2cefe, #f2a2e8);
+background-size: 100% 100%;
 }
 .continue {
     position:fixed;
@@ -355,13 +378,10 @@ header {
     left:0px;
     width:100%;
     height:100%;
-    background-color:#e6dfc3;
     z-index:499;
     padding:10px;
     text-align:center;
     font-size:28px;
-    background: #a7f5be;
-    background-image:url(../assets/img/pattern-dots.png); 
     opacity:0;
     transition:all 0.5s;
     display:block !important;
@@ -385,8 +405,30 @@ header {
     border-radius:27px;
 }
 
+.speech_blob {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:170px;
+    background-color:rgba(253, 248, 227, 1);
+    border-radius:100%;
+}
+.speech_blob:nth-child(1) {
+    top:100px;
+    height:100px;
+}
+.speech_text {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:250px;
+    height:100%;
+    padding:50px;
+    padding-top:30px;
+    padding-bottom:5px;
+}
 .resident_speech { 
-    background-color:rgba(253, 248, 227, 0.94);
     color:#807256;
     height:130px;
     
@@ -399,14 +441,64 @@ header {
     padding-bottom:5px;
     font-size:22px;
     border-radius:80px;
+    /*
     box-shadow:1px 1px 5px rgba(0,0,0,0.26);
+    */
     opacity:1;
-    backdrop-filter:blur(7px);
     line-height: 1.2;
     text-align:left;
     transform:scale(1);
     transition:all 0.2s;
+    -webkit-animation: errorBg 5s ease infinite;
+    -moz-animation: errorBg 5s ease infinite;
+    animation: errorBg 5s ease infinite;
 }
+
+@-webkit-keyframes errorBg {
+    0% {
+    border-radius:70% 70% 60% 60%;
+    }
+    50% {
+    border-radius:60% 60% 70% 70%;
+    }
+    100% {
+    border-radius:70% 70% 60% 60%;
+    }
+}
+
+@-moz-keyframes errorBg {
+    0% {
+    border-radius:70% 70% 60% 60%;
+    }
+    50% {
+    border-radius:60% 60% 70% 70%;
+    }
+    100% {
+    border-radius:70% 70% 60% 60%;
+    }
+}
+
+@keyframes errorBg {
+    0% {
+    border-radius:65% 65% 60% 60%;
+    }
+    50% {
+    border-radius:60% 60% 65% 65%;
+    }
+    100% {
+    border-radius:65% 65% 60% 60%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 .resident_speech_hidden {
     transform:scale(0);
     bottom:50px;
@@ -414,7 +506,7 @@ header {
 
 
 .resident_name {
-    background-color:#41d67a;
+background: linear-gradient(90deg, #fea3aa, #f8b88b, #faf884, #baed91, #b2cefe, #f2a2e8);
     min-width:50px;
     max-width:100px;
     height:26px;
@@ -423,7 +515,7 @@ header {
     bottom:155px;
     left:30px;
     border-radius:15px;
-    color:#2d865d;
+    color:rgba(0,0,0,0.59);
     font-family: 'Raleway', sans-serif;
     text-align:center;
     padding:17px;

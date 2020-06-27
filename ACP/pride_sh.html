@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Animal Crossing Island: Fen - Scavenger Hunt</title>
+     
+        <meta property="og:title" content="Fen Scavenger Hunt">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="http://anthony-lafleur.github.io/ACP/assets/img/hunt/splash.png">
+        <meta property="og:url" content="http://anthony-lafleur.github.io/ACP/sh.html">
+        
+        <meta name="author" content="Anthony LaFleur">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+        
+        <link rel="stylesheet" media="screen and (min-width: 740px)" href="css/base.css" />
+        <link rel="stylesheet" media="screen and (max-width: 739px)" href="css/mobile_base.css" />
+        
+        <link rel="stylesheet" media="screen and (min-width: 740px)" href="css/sh.css" />
+        <link rel="stylesheet" media="screen and (max-width: 739px)" href="css/mobile_sh.css" />
+        
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Raleway:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        
+        <link rel="icon" 
+            type="image/png" 
+            href="assets/img/favicon.png"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    
+    <body id="body">
+    <img src="assets/img/hunt/splash.png" width:100%;>
+        <header>
+            <div class="bumps2"></div>
+        </header>
+        
+        <div class="loading" id="loading_screen"><span id="loading_text">loading...</span></div>
+        <div id="continue" class=" " onclick="continuee()">
+        </div>
+        <div class="win_hidden win1 win" id="win_screen">
+            
+            <div class="win_cover">
+            </div>
+            <div class="resident">
+                <img class="resident_photo" src="assets/img/hunt/tony_normal.png" width="120px;" id="photo_normal">
+                <img class="resident_photo resident_photo_hidden" src="assets/img/hunt/tony_happy.png" width="120px;" id="photo_happy">
+                <img class="resident_photo resident_photo_hidden" src="assets/img/hunt/tony_greeting.png" width="120px;" id="photo_greet">
+                <img class="resident_photo resident_photo_hidden" src="assets/img/hunt/tony_bewild.png" width="120px;" id="photo_bewild">
+                <div class="resident_speech resident_speech_hidden" id="speech">
+                <div class="speech_blob"></div>
+                <div class="speech_blob"></div>
+                <div class="speech_text" id="speech_text"></div>
+                
+                </div>
+                <div class="resident_name resident_name_hidden" id="name">Tony</div>
+                
+                
+                <svg id="arrow" class="arrow arrow_hidden" width="45" height="25" viewBox="0 0 45 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.5 25C18.0184 25 7.59473 12.6404 1.55317 4.96431C-0.122281 2.83559 1.72264 -0.179893 4.39835 0.243337C10.2831 1.17415 18.2164 2.28736 22.5 2.28736C26.7836 2.28736 34.7169 1.17415 40.6017 0.243339C43.2774 -0.17989 45.1223 2.83559 43.4468 4.96431C37.4053 12.6404 26.9816 25 22.5 25Z" fill="#F1AE04"/>
+    </svg>
+                
+                
+          
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </div>
+        </div>
+        <div class="openednotonmobile">Please open this page on a mobile device!</div>
+        <div class="sh_wrapper">
+            
+            <form autocomplete="off" class="bar_wrapper">
+                <input class="bar bar_hidden" type="tel" id="guess" name="guess" onfocus="this.value=''" value="PIN" onkeypress="handle(event)"><br>
+                <button id="guessbutton" type="button" class="guess_button guess_button_hidden" value=" " onclick="wawa()"></button>
+                <div class="bbutton bbutton_hidden" id="backbutton" onclick="uiunfocus()"></div>
+            <div class="bumps"></div>
+                
+                <button type="button" id="helpbutton" class="help_button" value=" "></button>
+            </form> 
+            <div class="clues" id="clues">
+                <div class="clue" id="1" >
+                    <img alt="secret beach" src="assets/img/hunt/secretbeach.jpg" onclick="uifocus(1)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp1" onclick="uifocus(1)" class="stamp" />
+                    <div class="hint">Northern Shore</div>
+                </div>
+                <div class="clue" id="2">
+                    <img alt="Able Sisters" src="assets/img/hunt/ablesis.jpg" onclick="uifocus(2)" class="clue_image"/> 
+                    <img src="assets/img/hunt/stamp.png" id="stamp2" onclick="uifocus(2)" class="stamp" />
+                    <div class="hint" style="transform:rotate(2deg);margin-top:-21px;">Rose Garden</div>
+                </div>
+                <div class="clue" id="3">
+                    <img alt="Zen Garden" src="assets/img/hunt/zen.jpg" onclick="uifocus(3)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp3" onclick="uifocus(3)" class="stamp" />
+                    <div class="hint">Cornered</div>
+                </div>
+                <div class="clue" id="4">
+                    <img alt="Orchard" src="assets/img/hunt/orchard.jpg" onclick="uifocus(4)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp4" onclick="uifocus(4)" class="stamp" />
+                    <div class="hint" style="transform:rotate(1.5deg);margin-top:-21px;">Look up, look down.</div>
+                </div>
+                <div class="clue" id="5">
+                    <img alt="Look Out" src="assets/img/hunt/lookout.jpg" onclick="uifocus(5)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp5" onclick="uifocus(5)" class="stamp" />
+                    <div class="hint" style="transform:rotate(4deg);margin-top:-18px;margin-left:21px;">Roadside</div>
+                </div>
+                <div class="clue" id="6">
+                    <img alt="Wheel" src="assets/img/hunt/wheel.jpg" onclick="uifocus(6)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp6" onclick="uifocus(6)" class="stamp" />
+                    <div class="hint"><span style="font-size:16px;">th<span style="font-weight: bold; bold;font-size:18px;">E</span> <span style="font-weight: bold; bold;font-size:18px;">F</span>en f<span style="font-weight: bold;font-size:18px;">A</span>ir</span></div>
+                </div>
+                <div class="clue" id="7">
+                    <img alt="Look Out" src="assets/img/hunt/garden.jpg" onclick="uifocus(7)" class="clue_image" />
+                    <img src="assets/img/hunt/stamp.png" id="stamp7" onclick="uifocus(7)" class="stamp" />
+                    <div class="hint" style="transform:rotate(4deg);margin-top:-18px;margin-left:21px;">hyacinth x3</div>
+                </div>
+            </div>
+            <div class="help"></div>
+        </div>
+    </body>
+    <script src="sh.js"></script>
+        
+
+    
+</html>

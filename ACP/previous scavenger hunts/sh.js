@@ -59,46 +59,25 @@ var key_7 = false;
 
 var text = [
     [ /* Intro texts  */
-    "happy"  , "Welcome to the Fen Pride 2020 Scavenger Hunt!",
-    "normal" , "I have tons of exciting activities planned for you tonight!",
-    "happy" , "The first of which will be this scavenger hunt.",
-    "normal" , "Do you already know how to play?",
+    "happy"  , "Hey! Glad you could make it to the party!", 
+    "normal" , "I'm super excited to share this new game with you.",
+    "normal" , "In a few moments I'm going to show you photos from around my island.",
+    "normal" , "You can tap one of these photos to get a better look at it.",
+    "happy"  , "Each photo will lead you to a different location!",
+    "normal" , "At each location you will find a 3 digit PIN.",
+    "bewild" , "...or a puzzle to obtain a PIN.",
+    "normal" , "Enter the PIN to receive a stamp.",
+    "normal" , "Once you have collected all 7 stamps...",
+    "happy"  , "I'll tell you where to find me!",
+    "greet"  , "Let the Scavenger Hunt begin!"
     ],
     
     [ /* Win texts */
-    "greet", "Great Job!, You've found and solved all of my puzzles!",
-    "normal", "I hope you enjoyed this first event. Are you ready for the next one?",
-    "normal", "Once everyone has finished this scavenger hunt...",
-    "normal", "We can move on to the next event of the evening!",
-    "happy", "Thanks again for playing! Meet me in the far left room of my house!"
-    ],
-    
-    [ /* Instructive Texts  */
-    "happy"  , "Hey! Glad you could make it to the party!", 
-    "normal" , "I'm super excited to share this new game with you.",
-    "normal" , "In a few moments I'm going to show you photos from around my island.",
-    "normal" , "You can tap one of these photos to get a better look at it.",
-    "happy"  , "Each photo will lead you to a different location!",
-    "normal" , "At each location you will find a 3 digit PIN.",
-    "bewild" , "...or a puzzle to obtain a PIN.",
-    "normal" , "Enter the PIN to receive a stamp.",
-    "normal" , "Once you have collected all 7 stamps...",
-    "happy"  , "I'll tell you where to find me!",
-    "greet"  , "Let the Scavenger Hunt begin!"
-    ],
-    
-    [ /* Intro Texts - Continued  */
-    "happy"  , "Hey! Glad you could make it to the party!", 
-    "normal" , "I'm super excited to share this new game with you.",
-    "normal" , "In a few moments I'm going to show you photos from around my island.",
-    "normal" , "You can tap one of these photos to get a better look at it.",
-    "happy"  , "Each photo will lead you to a different location!",
-    "normal" , "At each location you will find a 3 digit PIN.",
-    "bewild" , "...or a puzzle to obtain a PIN.",
-    "normal" , "Enter the PIN to receive a stamp.",
-    "normal" , "Once you have collected all 7 stamps...",
-    "happy"  , "I'll tell you where to find me!",
-    "greet"  , "Let the Scavenger Hunt begin!"
+    "happy", "Great Job!",
+    "greet", "You've found and solved all of my puzzles!",
+    "normal", "I suppose that means I should tell you where I am...",
+    "bewild", "Maybe this is more fun if I just give you a clue!",
+    "happy", "Just kidding... I'm at the airport! Thanks again for playing!"
     ]
            ];
 
@@ -393,16 +372,16 @@ function speech(x,y) {
     
     
     if ( speech_instance == 0 && text[x][y] == null) {
-        clearBox("speech_text");
+        clearBox("speech");
         setTimeout( function() { document.getElementById("win_screen").classList.remove('win1'); }, 500);
         setTimeout( function() { document.getElementById("win_screen").classList.remove('win'); }, 0);
     } else if ( speech_instance == 1 && speech_number == 9 ) {    
-        clearBox("speech_text");
-        $("#speech_text").writeText(text[x][y]);
+        clearBox("speech");
+        $("#speech").writeText(text[x][y]);
         console.log("end");
     } else {    
-        clearBox("speech_text");
-        $("#speech_text").writeText(text[x][y]);
+        clearBox("speech");
+        $("#speech").writeText(text[x][y]);
         setTimeout(function(){ enablettc(); }, ( 2 + characterwritetime ) * text[x][y].length);
     }
 }
