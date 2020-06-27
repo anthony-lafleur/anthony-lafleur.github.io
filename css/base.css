@@ -24,13 +24,13 @@ header {
 }
 footer {
     position:fixed;
-    background-color:#1d1d1d;
-    right:0px;
-    top:0px;
-    height:100%;
-    width:100px;
+    left:10px;
+    bottom:0px;
+    height:40px;
+    width:205px;
     z-index:4;
     text-align:center;
+    padding-bottom:50px;
 }
 header > img {
     background-color:lightgray;
@@ -101,10 +101,10 @@ h1 > a {
 /* Cards */
 .item {
     width: 150px;
-    height: 200px;
     background-color:white;
-    margin:7px;
-    border-radius:14px;
+    margin-left:8px;
+    margin-top:8px;
+    border-radius:12px;
     text-align:center;
     overflow:hidden;
     cursor: pointer;
@@ -120,6 +120,44 @@ h1 > a {
     opacity:1;
     transition:0.2s all;
 }
+.item_cover:hover {
+    opacity:0.1;
+}
+.card_title {
+    position:absolute;
+    left:50%;
+    top:50%;
+    
+    margin-left:-90px;
+    margin-top:-90px;
+    
+    height:180px;
+    width:180px;
+    background-color:rgba(0,0,0,0.38);
+    backdrop-filter:blur(18px);
+    -backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    letter-spacing: 0px;
+    font-weight: 600;
+    color:#c7c7c7;
+    border-radius:100%;
+    transform:scale(0.65);
+    font-size:20px;
+}
+.card_main_title {
+    position:absolute;
+    bottom:85px;
+    left:0px;
+    width:100%;
+    color:white;
+}
+.card_main_sub_title {
+    position:absolute;
+    top:99px;
+    left:0px;
+    width:100%;
+}
+
 
 .item_inner_wrapper {
     position:relative;
@@ -128,54 +166,41 @@ h1 > a {
     width:100%;
     height:100%;
 }
-.item_cover:hover {
-    opacity:0;
-}
-.card_title {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-top:-50px;
-    margin-left:-52px;
-    
-    height:110px;
-    width:110px;
-    border-radius:100%;
-    background-color:rgba(255,255,255,0.95);
-    letter-spacing: -1px;
-    font-weight: 600;
-    color:#6a6a6a;
-    transform:scale(.82);
-}
-.card_main_title {
-    position:absolute;
-    top:33px;
-    left:0px;
-    width:100%;
-    color:#1d1d1d;
-}
-.card_main_sub_title {
-    position:absolute;
-    top:53px;
-    left:0px;
-    width:100%;
-}
 
 
+a:link {
+    text-decoration: none;
+    color:#efefef !important;
+}
 
+a:visited {
+    text-decoration: none;
+    color:#efefef !important;
+}
 
+a:hover {
+    text-decoration: none;
+    color:#efefef !important;
+}
+
+a:active {
+    text-decoration: none;
+    color:#efefef !important;
+}
 /* wrapper for cards */
 .wrapper {
     position:absolute;
     top:0px;
-    left:0px;
-    right:0px;
+    left:225px !important;
+    max-width:1000px;
+    right:225px;
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
     height:auto;
     padding:15px;
     justify-content: left;
+    overflow-x:hidden;
 }
 .item_acsh {
     
@@ -183,6 +208,20 @@ h1 > a {
     background-image:url(../ACP/assets/img/pattern-dots.png); 
 }
 
+time {
+    position: absolute;
+    top:18px;
+    right:10%;
+    padding:10px;
+    padding-left:15px;
+    padding-right:15px;
+    border-radius:30px;
+    background-color:rgba(0,0,0,0.38);
+    backdrop-filter:blur(18px);
+    -backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    transform:scale(0.95);
+}
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
@@ -228,4 +267,77 @@ a:hover {
 a:active {
     text-decoration: none;
     color:#555;
+}
+
+
+article {
+    width:100%;
+    color:white;
+    overflow-x:hidden;
+}
+article > p {
+    padding:20px;
+    padding-top:5px;
+    padding-bottom:0px;
+    font-size:18px;
+    text-align: justify;
+}
+figure {
+    width:100%;
+    justify-content: center;
+    margin:0;
+    text-align:center;
+    padding-top:15px;
+    color:#7c7c7c;
+}
+figure > img {
+    position:relative;
+    margin:8px;
+    border-radius:12px;
+    background-color:#898989;
+    
+}
+.x {
+    position:relative;
+    margin:8px;
+    margin-left:14px;
+    margin-right:14px;
+    border-radius:12px;
+    
+}
+
+
+
+.arrow {
+    position:absolute;
+    margin-top:8px;
+    border: solid rgba(255,255,255,95);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 8px;
+}
+.arrow_hidden {
+    border: solid rgba(255,255,255,0.15);
+    border-width: 0 4px 4px 0;
+}
+.homebutton {
+    position:absolute;
+    left:50%;
+    
+    margin-top:0px;
+    margin-left:-33px;
+    
+    width:66px;
+    text-align:center;
+    color:rgba(255,255,255,95);
+}
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin-left:70px;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin-left:-90px;
 }
