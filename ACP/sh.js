@@ -34,13 +34,13 @@ function mood(x) {
 
 
 
-var keyword_1 = "596";
-var keyword_2 = "108";
-var keyword_3 = "219";
-var keyword_4 = "326";
-var keyword_5 = "487";
-var keyword_6 = "387";
-var keyword_7 = "111";
+var keyword_1 = "427";
+var keyword_2 = "229";
+var keyword_3 = "596";
+var keyword_4 = "822";
+var keyword_5 = "326";
+var keyword_6 = "0";
+var keyword_7 = "0";
 
 var current_selected = "default";
 var TTW_stamp = 500;
@@ -60,45 +60,18 @@ var key_7 = false;
 var text = [
     [ /* Intro texts  */
     "happy"  , "Welcome to the Fen Pride 2020 Scavenger Hunt!",
-    "normal" , "I have tons of exciting activities planned for you tonight!",
-    "happy" , "The first of which will be this scavenger hunt.",
-    "normal" , "Do you already know how to play?",
+    "normal" , "The rules for this are about the same as last time...",
+    "normal" , "You will follow my photo clues, and find a 3 digit pin.",
+    "normal" , "Enter that 3 digit pin to stamp your photo.",
+    "happy" , "Happy hunting!!"
     ],
     
     [ /* Win texts */
     "greet", "Great Job!, You've found and solved all of my puzzles!",
-    "normal", "I hope you enjoyed this first event. Are you ready for the next one?",
+    "happy", "I hope you enjoyed this scavenger hunt!",
     "normal", "Once everyone has finished this scavenger hunt...",
-    "normal", "We can move on to the next event of the evening!",
+    "greet", "We can move on to the next event of the evening!",
     "happy", "Thanks again for playing! Meet me in the far left room of my house!"
-    ],
-    
-    [ /* Instructive Texts  */
-    "happy"  , "Hey! Glad you could make it to the party!", 
-    "normal" , "I'm super excited to share this new game with you.",
-    "normal" , "In a few moments I'm going to show you photos from around my island.",
-    "normal" , "You can tap one of these photos to get a better look at it.",
-    "happy"  , "Each photo will lead you to a different location!",
-    "normal" , "At each location you will find a 3 digit PIN.",
-    "bewild" , "...or a puzzle to obtain a PIN.",
-    "normal" , "Enter the PIN to receive a stamp.",
-    "normal" , "Once you have collected all 7 stamps...",
-    "happy"  , "I'll tell you where to find me!",
-    "greet"  , "Let the Scavenger Hunt begin!"
-    ],
-    
-    [ /* Intro Texts - Continued  */
-    "happy"  , "Hey! Glad you could make it to the party!", 
-    "normal" , "I'm super excited to share this new game with you.",
-    "normal" , "In a few moments I'm going to show you photos from around my island.",
-    "normal" , "You can tap one of these photos to get a better look at it.",
-    "happy"  , "Each photo will lead you to a different location!",
-    "normal" , "At each location you will find a 3 digit PIN.",
-    "bewild" , "...or a puzzle to obtain a PIN.",
-    "normal" , "Enter the PIN to receive a stamp.",
-    "normal" , "Once you have collected all 7 stamps...",
-    "happy"  , "I'll tell you where to find me!",
-    "greet"  , "Let the Scavenger Hunt begin!"
     ]
            ];
 
@@ -123,7 +96,7 @@ function uifocus(x) {
     document.getElementById(x).scrollIntoView();
     document.getElementById("clues").scrollBy(0, -200);
     var i;
-    for (i = 1; i < 8; i++) {
+    for (i = 1; i < 6; i++) {
         document.getElementById(i).classList.add('clue_hide');
     }
   console.log("all clues hidden")
@@ -170,7 +143,7 @@ function uiunfocus() {
     window.focused = false;
     document.getElementById(window.current_selected).scrollIntoView();
     var i;
-    for (i = 1; i < 8; i++) {
+    for (i = 1; i < 6; i++) {
         document.getElementById(i).classList.remove('clue_hide');
         console.log("clue #" + i + " unhidden")
         document.getElementById(i).classList.remove('clue_active');
@@ -302,9 +275,7 @@ function wincheck() {
        key_2 == true &&
        key_3 == true &&
        key_4 == true &&
-       key_5 == true &&
-       key_6 == true  &&
-       key_7 == true ) {
+       key_5 == true ) {
         window.speech_instance = 1;
         window.speech_number = 1;
         window.speech_mood = 0;
