@@ -15,44 +15,6 @@
     <body>
         <header>
             <!--<img src="" width="80px" height="80px" />-->
-            <script> 
-            
-            
-            jQuery(function(){
-                 jQuery('#showall').click(function(){
-                       jQuery('.item').show();
-                       $(".li_selected").removeClass("li_selected");
-                       $("#showall").addClass("li_selected");
-                     console.log(">show all");
-                });
-                 jQuery('#showweb').click(function(){
-                       jQuery('.prog').hide();
-                       jQuery('.art').hide();
-                       jQuery('.web').show();
-                       $(".li_selected").removeClass("li_selected");
-                       $("#showweb").addClass("li_selected");
-                     console.log(">hide prog + art\n>show web");
-                });
-                 jQuery('#showprog').click(function(){
-                       jQuery('.art').hide();
-                       jQuery('.web').hide();
-                       jQuery('.prog').show();
-                       $(".li_selected").removeClass("li_selected");
-                       $("#showprog").addClass("li_selected");
-                     console.log(">hide web + art\n>show prog");
-                });
-                 jQuery('#showart').click(function(){
-                       jQuery('.prog').hide();
-                       jQuery('.web').hide();
-                       jQuery('.art').show();
-                       $(".li_selected").removeClass("li_selected");
-                       $("#showart").addClass("li_selected");
-                     console.log(">hide prog + web\n>show art");
-                });
-            });
-            
-            
-            </script>
             <h1>
                 <a href="index.html">
                     <span style="letter-spacing: 4px;">ANTHONY</span>
@@ -62,10 +24,7 @@
             </h1>
             <nav>
                 <ul>
-                    <li class="li_selected" id="showall">ALL WORK</li>
-                    <li id="showweb">WEB</li>
-                    <li id="showprog">PROGRAMMING</li>
-                    <li id="showart">DESIGN & ART</li>
+                    <li class="li_selected"><a href="index.html">PROJECTS</a></li>
                 </ul>
                 <ul>
                     <li><a href="about.html">ABOUT</a></li>
@@ -84,7 +43,7 @@
             
             
             <footer style="background-color:var(--bg-color-DARK);z-index:600;position:fixed;height:60px;margin:auto;padding-top:30px;bottom:0px;padding-bottom:0px;font-size:20px;">
-                <a href="resume.pdf" download="anthony-lafleur-resume-2020" target="_new">View PDF</a>
+                <a class="resume_button" href="resume.pdf" download="anthony-lafleur-resume-2020" target="_new">View PDF</a>
             </footer>
             
     </body>

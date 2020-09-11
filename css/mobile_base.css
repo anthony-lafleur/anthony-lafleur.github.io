@@ -1,10 +1,13 @@
 :root {
-  --bg-color-DARK: #121212;  
+  --bg-color-DARK: #1d1d1d; 
 }
 
 
 
-
+.resume_button {
+    padding:15px;
+    background-color:#585858;
+}
 
 body {
     background-color:var(--bg-color-DARK);
