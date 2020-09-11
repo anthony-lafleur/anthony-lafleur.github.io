@@ -4,8 +4,6 @@
 }
 
 
-
-
 body {
     background-color:var(--bg-color-DARK);
     color:#555;
@@ -158,7 +156,6 @@ h1 > a {
     width:100%;
 }
 
-
 .item_inner_wrapper {
     position:relative;
     top:0px;
@@ -166,7 +163,10 @@ h1 > a {
     width:100%;
     height:100%;
 }
-
+.resume_wrapper {
+    
+    margin-left:230px !important;
+}
 
 a:link {
     text-decoration: none;
