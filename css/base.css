@@ -3,6 +3,10 @@
   --bg-color-DARK: #1d1d1d;  
 }
 
+nav > ul:nth-child(2) {
+    top:250px;
+    position:absolute;
+}
 
 body {
     background-color:var(--bg-color-DARK);
