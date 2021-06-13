@@ -14,7 +14,8 @@ body {
     font-family: 'Dosis', sans-serif;
 }
 iframe {
-    width:100%;
+    max-width:750px;
+    width:70%;
     min-width:400px;
 }
 header {
@@ -106,14 +107,13 @@ h1 > a {
 /* Cards */
 .item {
     width: 150px;
-    background-color:#333;
+    background-color:white;
     margin-left:8px;
     margin-top:8px;
     border-radius:12px;
     text-align:center;
     overflow:hidden;
     cursor: pointer;
-    transition:0.1s all;
 }
 .item_cover {
     position:absolute;
@@ -127,7 +127,7 @@ h1 > a {
     transition:0.2s all;
 }
 .item_cover:hover {
-    opacity:0;
+    opacity:0.1;
 }
 .card_title {
     position:absolute;
@@ -174,7 +174,6 @@ h1 > a {
 .resume_wrapper {
     
     margin-left:230px !important;
-    margin-right:0px;
 }
 .resume_button {
     background-color:#585858;
