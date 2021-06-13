@@ -101,6 +101,17 @@ h1 > a {
 }
 
 
+.headshot {
+    position:absolute;
+    width:200px;
+    border-radius:100%;
+    left:50%;
+    margin-left:-100px;
+}
+.headshot_wrapper {
+    width:100%;
+    height:200px;
+}
 
 .social_bar {
     position:absolute;
