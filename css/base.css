@@ -107,6 +107,7 @@ h1 > a {
 /* Cards */
 .item {
     width: 150px;
+    max-height:200px;
     background-color:white;
     margin-left:8px;
     margin-top:8px;
