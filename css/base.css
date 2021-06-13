@@ -216,7 +216,7 @@ a:active {
     top:0px;
     left:225px !important;
     max-width:1000px;
-    right:225px;
+    right:5%;
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
@@ -227,7 +227,7 @@ a:active {
 }
 .item_acsh {
     
-    background-color: #f5deaf;
+    background-color:  #a7f5be;
     background-image:url(../ACP/assets/img/pattern-dots.png); 
 }
 
