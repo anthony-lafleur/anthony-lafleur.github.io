@@ -245,6 +245,9 @@ time {
     -webkit-backdrop-filter:blur(18px);
     transform:scale(0.95);
 }
+.contact_mobile_wrapper {
+    display:hidden;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 0px;
