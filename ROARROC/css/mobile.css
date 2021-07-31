@@ -6,7 +6,7 @@
     --secondary-color: rgb(39, 177, 195);
     --third-color: #f0ebed;
     
-    --glass_blur:blur(65px);
+    --glass_blur:blur(75px);
     --dark_glass_color:rgba(0,0,0,0.25);
     --light_glass_color:rgba(255,255,255,0.5);
     
@@ -134,7 +134,7 @@ p {
 .nav {
     position:fixed;
     left:-100%;
-    top:0px;
+    top:200px;
     width:100%;
     height:100%;
     background-color: var(--dark_glass_color);
@@ -170,13 +170,13 @@ p {
     border-radius:75px;
 }
 .menu_item {
-    height:200px;
+    height:190px;
     width:100%;
-    background-color:var(--dark_glass_color);
     font-size:90px;
-    padding-left:30px;
+    padding-left:0px;
     color:var(--third-color);
     display:block;
+    text-align: center;
 }
 .menu_item:first-child {
     margin-top:200px;
