@@ -13,7 +13,10 @@
     --dropshadow-var:0px 0px 5px black;
 }
 
-
+html {
+    
+  scroll-behavior: smooth;
+}
 body {
     background-color: var(--main-bg-color);
     margin:0px;
@@ -149,4 +152,18 @@ p {
     -moz-transition: 1s ease-in-out;
     -o-transition: 1s ease-in-out;
     transition: 1s ease-in-out;
+}
+
+.menu_item {
+    height:200px;
+    width:100%;
+    background-color:var(--dark_glass_color);
+    font-size:90px;
+    color:var(--third-color);
+    border-bottom:1px solid white;
+    display:block;
+    text-align:center;
+}
+.menu_item:first-child {
+    margin-top:200px;
 }
