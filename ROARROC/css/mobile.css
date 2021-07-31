@@ -26,6 +26,7 @@ header {
     top:0px;
     background-color: var(--dark_glass_color);
     backdrop-filter: var(--glass_blur);
+    -webkit-backdrop-filter: var(--glass_blur);
     height:200px;
     left:0px;
     right:0px;
