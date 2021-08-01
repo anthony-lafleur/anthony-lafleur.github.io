@@ -355,7 +355,7 @@ td:nth-child(odd) {
 }
 
 .blocker_2 {
-    height:700px;
+    height:900px;
 }
 
 
@@ -432,4 +432,7 @@ td:nth-child(odd) {
 
 .linko_second {
     top:250px;
+}
+.linko_third {
+    top:500px;
 }
