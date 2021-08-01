@@ -405,11 +405,11 @@ td:nth-child(odd) {
     font-size:36pt;
 }
 .linko_icon_phone {
-    box-shadow: 0px 0px 35px rgba(81, 177, 70, 0.51);
+    box-shadow: 0px 0px 35px rgba(10, 211, 24, 0.51);
     
 }
 .linko_phone {
-    background: radial-gradient(ellipse at top, rgba(81, 177, 70, 0.51), transparent);
+    background: radial-gradient(ellipse at top, rgba(10, 211, 24, 0.51), transparent);
 }
 .linko_icon_email {
     box-shadow: 0px 0px 35px rgba(27, 151, 246, 0.51);
@@ -417,6 +417,12 @@ td:nth-child(odd) {
 }
 .linko_email {
     background: radial-gradient(ellipse at top, rgba(27, 151, 246, 0.51), transparent);
+}
+.linko_maps {
+    
+    background: radial-gradient(ellipse at top, rgba(157, 223, 123, 0.36), transparent),
+            radial-gradient(ellipse at left, rgba(255, 214, 52, 0.36), transparent),
+            radial-gradient(ellipse at bottom right, rgba(51, 148, 227, 0.36), transparent);
 }
 .linko_arrow {
     bottom:58px;
