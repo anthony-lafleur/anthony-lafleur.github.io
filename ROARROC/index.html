@@ -14,6 +14,18 @@
 
 
         <script src="resources/menu.js"></script>
+        <script>
+            function mapsSelector() {
+  if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) || 
+     (navigator.platform.indexOf("iPad") != -1) || 
+     (navigator.platform.indexOf("iPod") != -1))
+    window.open("maps://www.google.com/maps/place/ROAR/@43.1561744,-77.5689413,19.75z/data=!4m13!1m7!3m6!1s0x89d6b584112b1ab7:0x65b9a1eedd57b6d4!2s621+Culver+Rd,+Rochester,+NY+14609!3b1!8m2!3d43.1560542!4d-77.5685827!3m4!1s0x89d6b5687fc89fdf:0x482587cbb947dab8!8m2!3d43.1560437!4d-77.5688367");
+else /* else use Google */
+    window.open("https://www.google.com/maps/place/ROAR/@43.1561744,-77.5689413,19.75z/data=!4m13!1m7!3m6!1s0x89d6b584112b1ab7:0x65b9a1eedd57b6d4!2s621+Culver+Rd,+Rochester,+NY+14609!3b1!8m2!3d43.1560542!4d-77.5685827!3m4!1s0x89d6b5687fc89fdf:0x482587cbb947dab8!8m2!3d43.1560437!4d-77.5688367");
+}
+            
+        </script>
     </head>
       
     <body>
@@ -105,7 +117,7 @@
                         <div class="linko_info">admin@roarroc.com</div>
                     </div>
                 </a>
-                <a href="geo:124.028582,-29.201930" target="_blank">
+                <a  onclick="mapsSelector()">
                     <div class="linko linko_third linko_email">
                         <img class="linko_icon linko_icon_email" src="img/email.png" />
                         <div class="linko_arrow"></div>
