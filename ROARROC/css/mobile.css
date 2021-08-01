@@ -382,6 +382,7 @@ td:nth-child(odd) {
     border-bottom-left-radius: 100px;
     margin-top:75px;
     background-color:var(--dark_glass_color);
+    color:var(--third-color);
 }
 
 .linko_icon {
