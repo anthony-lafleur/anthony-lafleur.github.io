@@ -377,7 +377,7 @@ td:nth-child(odd) {
     width:90%;
     height:200px;
     margin-left:5%;
-    border-radius:75px;
+    border-radius:120px;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
     margin-top:75px;
@@ -386,6 +386,7 @@ td:nth-child(odd) {
 
 .linko_icon {
     position:absolute;
+    top:-1px;
     background-color:white;
     width:200px;
     height:200px;
@@ -404,7 +405,7 @@ td:nth-child(odd) {
     font-size:36pt;
 }
 .linko_icon_phone {
-    box-shadow: 0px 0px 35px #51b146;
+    box-shadow: 0px 0px 35px rgba(81, 177, 70, 0.51);
     
 }
 .linko_phone {
