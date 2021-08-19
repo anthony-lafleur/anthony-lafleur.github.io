@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/mobile.css">
+        <title>ROAR Rochester</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+        
+        <meta name="theme-color" content="#191718">
+        <meta property="og:title" content="ROAR Rochester" />
+        <meta property="og:image" content="img/og.png" />
+
+
+        <script src="resources/menu.js"></script>
+        <script>
+            function mapsSelector() {
+  if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) || 
+     (navigator.platform.indexOf("iPad") != -1) || 
+     (navigator.platform.indexOf("iPod") != -1))
+    window.open("maps://www.google.com/maps/place/ROAR/@43.1561744,-77.5689413,19.75z/data=!4m13!1m7!3m6!1s0x89d6b584112b1ab7:0x65b9a1eedd57b6d4!2s621+Culver+Rd,+Rochester,+NY+14609!3b1!8m2!3d43.1560542!4d-77.5685827!3m4!1s0x89d6b5687fc89fdf:0x482587cbb947dab8!8m2!3d43.1560437!4d-77.5688367");
+else /* else use Google */
+    window.open("https://www.google.com/maps/place/ROAR/@43.1561744,-77.5689413,19.75z/data=!4m13!1m7!3m6!1s0x89d6b584112b1ab7:0x65b9a1eedd57b6d4!2s621+Culver+Rd,+Rochester,+NY+14609!3b1!8m2!3d43.1560542!4d-77.5685827!3m4!1s0x89d6b5687fc89fdf:0x482587cbb947dab8!8m2!3d43.1560437!4d-77.5688367");
+}
+            
+        </script>
+    </head>
+      
+    <body>
+        <header>
+            <a href="index.html">
+                <img class="header_logo" src="img/full_logo_mobile.png" />
+            </a>
+
+
+            <svg onclick="openMenu()" class="hamburger" viewBox="0 0 100 80" width="200" height="200">
+                <g color="white">
+                    <rect fill="currentcolor" x="30" y="25" width="40" height="4"></rect>
+                    <rect fill="currentcolor" x="30" y="38" width="40" height="4"></rect>
+                    <rect fill="currentcolor" x="30" y="51" width="40" height="4"></rect>
+                </g>
+            </svg>
+
+        </header>
+            <br><br><br>
+            <p>
+                Bottle Service starting at $90.
+                <br>
+                Email for bottole service, booths, and private parties.
+                <br>
+                vip@roarroc.com
+                <br><br><br><br><br><br><br><br>
+            </p>
+        </div>
+        <nav id="nav" class="nav">
+            <div class="nav_inner" id="nav_inner">
+                <a class="menu_item" onclick="openMenu()" href="index.html#about">ABOUT</a>
+                <a class="menu_item" onclick="openMenu()" href="index.html#hours">HOURS</a>
+                <a class="menu_item" onclick="openMenu()" href="index.html#contact">CONTACT</a>
+                <a class="menu_item" onclick="openMenu()" href="menu.html">MENU</a>
+                <a class="menu_item" onclick="openMenu()" href="VIP.html">VIP</a>
+                <a class="menu_item" onclick="openMenu()" href="BLM.html">ROAR #BLM</a>
+                <div class="menu_item">
+            </div>
+        </div>
+            
+        </nav>
+    </body>
+  </html>
