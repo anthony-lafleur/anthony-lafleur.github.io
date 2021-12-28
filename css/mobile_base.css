@@ -169,6 +169,7 @@ h1 > a {
     text-align:center;
     overflow:hidden;
     cursor: pointer;
+    min-height:200px;
 }
 .item_cover {
     position:absolute;
@@ -244,6 +245,20 @@ iframe {
     
     background-color: #a7f5be;
     background-image:url(../ACP/assets/img/pattern-dots.png); 
+}
+.item_roar {
+    
+    background-color:  #a7f5be;
+    background-image:url(../projects/roar/card.png); 
+    background-size:cover;
+    background-position: center;
+}
+.item_wmday21 {
+    
+    background-color:  #a7f5be;
+    background-image:url(../projects/womensday/splash.jpg); 
+    background-size:cover;
+    background-position: center;
 }
 
 /* width */

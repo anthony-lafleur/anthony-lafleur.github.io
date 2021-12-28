@@ -220,7 +220,7 @@ a:active {
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
-    height:auto;
+    height:100%;
     padding:15px;
     justify-content: left;
     overflow-x:hidden;
@@ -229,6 +229,20 @@ a:active {
     
     background-color:  #a7f5be;
     background-image:url(../ACP/assets/img/pattern-dots.png); 
+}
+.item_roar {
+    
+    background-color:  #a7f5be;
+    background-image:url(../projects/roar/card.png); 
+    background-size:cover;
+    background-position: center;
+}
+.item_wmday21 {
+    
+    background-color:  #a7f5be;
+    background-image:url(../projects/womensday/splash.jpg); 
+    background-size:cover;
+    background-position: center;
 }
 
 time {
