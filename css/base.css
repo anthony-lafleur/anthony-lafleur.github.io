@@ -237,6 +237,13 @@ a:active {
     background-size:cover;
     background-position: center;
 }
+.item_timelapse1 {
+    
+    background-color:  #a7f5be;
+    background-image:url(../projects/timelapse1/1.jpg); 
+    background-size:cover;
+    background-position: center;
+}
 .item_wmday21 {
     
     background-color:  #a7f5be;
