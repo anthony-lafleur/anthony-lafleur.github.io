@@ -238,17 +238,23 @@ a:active {
     background-color:  #a7f5be;
     background-image:url(../projects/vapt/0.jpg); 
 }
-.item_roar {
+.item_artdump_march {
     
     background-color:  #a7f5be;
-    background-image:url(../projects/roar/card.png); 
-    background-size:cover;
-    background-position: center;
+    background-image:url(../projects/artdump_march/cover.png); 
+    background-size:100%;
 }
 .item_timelapse1 {
     
     background-color:  #a7f5be;
     background-image:url(../projects/timelapse1/1.jpg); 
+    background-size:cover;
+    background-position: center;
+}
+.item_roar {
+    
+    background-color:  #a7f5be;
+    background-image:url(../projects/roar/card.png); 
     background-size:cover;
     background-position: center;
 }
@@ -324,6 +330,9 @@ a:active {
     color:#555;
 }
 
+.art_dump {
+    background-color:white;
+}
 
 article {
     width:100%;
